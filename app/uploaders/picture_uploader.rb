@@ -3,7 +3,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   process resize_to_limit: [400, 400]
 
   
-    storage :file
+     storage :file
   
 
   # アップロードファイルの保存先ディレクトリは上書き可能
