@@ -1,5 +1,6 @@
-Hi <%= @user.name %>,
+初めまして<%= @user.name %>様
 
-Welcome to the Sample App! Click on the link below to activate your account:
+このメールはWe Love Coffeeに新規登録された方へ送らせていていただいております。
+下記のURLから改めてサイトにアクセスいただくと正式に登録が完了いたします。
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
