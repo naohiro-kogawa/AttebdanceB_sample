@@ -21,7 +21,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
-      flash[:info] = "Please check your email to activate your account."
+      flash[:info] = "アカウント認証のためのメールを送りました！メールをご確認いただき、改めて
+      サイトにアクセスしていただくと登録が完了いたします。"
       redirect_to root_url
     else
       render 'new'
@@ -35,7 +36,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "プロフィールを変更しました"
       redirect_to @user
     else
       render 'edit'
@@ -44,18 +45,18 @@ class UsersController < ApplicationController
   
    def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "User deleted"
+    flash[:success] = "ユーザー登録を削除しました"
     redirect_to users_url
    end
     def following
-    @title = "Following"
+    @title = "フォロー"
     @user  = User.find(params[:id])
     @users = @user.following.paginate(page: params[:page])
     render 'show_follow'
-   end
+    end
 
   def followers
-    @title = "Followers"
+    @title = "フォロワー"
     @user  = User.find(params[:id])
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'
@@ -68,15 +69,11 @@ class UsersController < ApplicationController
                                    :password_confirmation)
     end
 
-    # beforeフィルター
-
-    # 正しいユーザーかどうかを確認
     def correct_user
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
 
-    # 管理者かどうかを確認
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
