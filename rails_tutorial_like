@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html
+  lang="ja"
+
+data-admin-domain="//blog.hatena.ne.jp"
+data-author="mochikichi321"
+data-avail-langs="ja en"
+data-blog="mochikichi.hatenablog.com"
+data-blog-host="mochikichi.hatenablog.com"
+data-blog-is-public="1"
+data-blog-name="新米パパの育児留学"
+data-blog-owner="mochikichi321"
+data-blog-uri="http://mochikichi.hatenablog.com/"
+data-blog-uuid="10328749687211211513"
+data-blogs-uri-base="http://mochikichi.hatenablog.com"
+data-brand="pro"
+data-data-layer="{&quot;hatenablog&quot;:{&quot;admin&quot;:{},&quot;pro&quot;:&quot;pro&quot;,&quot;page_id&quot;:&quot;entry&quot;,&quot;blog&quot;:{&quot;lang&quot;:&quot;ja&quot;,&quot;disable_ads&quot;:&quot;pro&quot;,&quot;enable_ads&quot;:&quot;false&quot;,&quot;name&quot;:&quot;\u65b0\u7c73\u30d1\u30d1\u306e\u80b2\u5150\u7559\u5b66&quot;,&quot;is_public&quot;:&quot;true&quot;,&quot;uri&quot;:&quot;http://mochikichi.hatenablog.com/&quot;,&quot;is_sleeping&quot;:&quot;false&quot;,&quot;force_pc_view&quot;:&quot;true&quot;,&quot;entry_show_footer_related_entries&quot;:&quot;false&quot;,&quot;is_responsive_view&quot;:&quot;true&quot;,&quot;content_seems_japanese&quot;:&quot;true&quot;,&quot;enable_keyword_link&quot;:&quot;false&quot;,&quot;owner_name&quot;:&quot;mochikichi321&quot;},&quot;brand&quot;:&quot;pro&quot;,&quot;analytics&quot;:{&quot;property_id&quot;:&quot;UA-74512363-4&quot;,&quot;non_sampling_property_id&quot;:&quot;&quot;,&quot;brand_property_id&quot;:&quot;&quot;,&quot;separated_property_id&quot;:&quot;UA-29716941-20&quot;},&quot;brand_tracking_category&quot;:&quot;pro&quot;,&quot;permalink_entry&quot;:{&quot;hour&quot;:&quot;7&quot;,&quot;author_name&quot;:&quot;mochikichi321&quot;,&quot;date&quot;:&quot;2017-04-08&quot;,&quot;categories&quot;:&quot;\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0\t\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0-Rails_\u30c1\u30e5\u30fc\u30c8\u30ea\u30a2\u30eb&quot;,&quot;title&quot;:&quot;Ruby on Rails \u3044\u3044\u306d(like)\u6a5f\u80fd\u62e1\u5f35 (rails\u30c1\u30e5\u30fc\u30c8\u30ea\u30a2\u30eb)&quot;,&quot;uri&quot;:&quot;http://mochikichi.hatenablog.com/entry/rails_tutorial_like&quot;},&quot;router_type&quot;:&quot;blogs&quot;}}"
+data-device="pc"
+data-dont-recommend-pro="false"
+data-globalheader-color="b"
+data-globalheader-type="pc"
+data-has-touch-view="1"
+data-no-suggest-touch-view="1"
+data-page="entry"
+data-parts-domain="https://hatenablog-parts.com"
+data-plus-available="1"
+data-pro="true"
+data-router-type="blogs"
+data-static-domain="https://cdn.blog.st-hatena.com"
+data-version="7e4fb21836a3e444fb0ee7a6b6c27bcf"
+
+itemscope
+itemtype="http://schema.org/Article"
+
+  data-initial-state="{}"
+
+  >
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" / >
+
+
+  
+
+
+
+  
+
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=7; IE=9; IE=10; IE=11" />
+  <title>Ruby on Rails いいね(like)機能拡張 (railsチュートリアル) - 新米パパの育児留学</title>
+
+  
+  <link rel="canonical" href="http://mochikichi.hatenablog.com/entry/rails_tutorial_like"/>
+
+
+
+      <link rel="amphtml" href="http://mochikichi.hatenablog.com/entry/rails_tutorial_like?amp=1">
+  
+
+<meta itemprop="name" content="Ruby on Rails いいね(like)機能拡張 (railsチュートリアル) - 新米パパの育児留学"/>
+
+  <meta itemprop="image" content="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mochikichi321/20170206/20170206212242.png"/>
+
+
+  <meta property="og:title" content="Ruby on Rails いいね(like)機能拡張 (railsチュートリアル) - 新米パパの育児留学"/>
+<meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://mochikichi.hatenablog.com/entry/rails_tutorial_like"/>
+
+  <meta property="og:image" content="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mochikichi321/20170206/20170206212242.png"/>
+
+    <meta property="og:description" content="Ruby on Rails tutorial 5.0（第4版）で実装したサンプルアプリケーションを元に、いいね(like)機能を拡張します。" />
+<meta property="og:site_name" content="新米パパの育児留学"/>
+
+  <meta property="article:published_time" content="1491603811" />
+
+    <meta property="article:tag" content="プログラミング" />
+    <meta property="article:tag" content="プログラミング-Rails_チュートリアル" />
+      <meta name="twitter:card"  content="summary_large_image" />
+    <meta name="twitter:image" content="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mochikichi321/20170206/20170206212242.png" />  <meta name="twitter:title" content="Ruby on Rails いいね(like)機能拡張 (railsチュートリアル) - 新米パパの育児留学" />    <meta name="twitter:description" content="Ruby on Rails tutorial 5.0（第4版）で実装したサンプルアプリケーションを元に、いいね(like)機能を拡張します。" />  <meta name="twitter:app:name:iphone" content="はてなブログアプリ" />
+  <meta name="twitter:app:id:iphone" content="583299321" />
+  <meta name="twitter:app:url:iphone" content="hatenablog:///open?uri=http%3A%2F%2Fmochikichi.hatenablog.com%2Fentry%2Frails_tutorial_like" />  <meta name="twitter:site" content="@mochikichi419" />
+  
+
+    <meta name="google-site-verification" content="xQBdLbTjkbNxlh3UZcz9138mIxwYN20yRz7P0sTAh68">
+    <meta name="keywords" content="webエンジニア　未経験　転職 30代 Ruby on rails">
+    <meta name="msvalidate.01" content="8EA602EA0235579FA346B35D88CAF7B6">    <meta name="description" content="Ruby on Rails tutorial 5.0（第4版）で実装したサンプルアプリケーションを元に、いいね(like)機能を拡張します。" />
+
+  
+<script
+  id="embed-gtm-data-layer-loader"
+  data-data-layer-page-specific="{&quot;hatenablog&quot;:{&quot;blogs_permalink&quot;:{&quot;is_blog_sleeping&quot;:&quot;false&quot;,&quot;blog_hide_afc_func&quot;:&quot;true&quot;,&quot;has_related_entries_with_elasticsearch&quot;:&quot;false&quot;,&quot;is_author_pro&quot;:&quot;true&quot;,&quot;blog_struct_hide_afc&quot;:&quot;true&quot;,&quot;blog_afc_issued&quot;:&quot;false&quot;,&quot;brand_hide_afc&quot;:&quot;false&quot;,&quot;entry_afc_issued&quot;:&quot;false&quot;,&quot;blog_hide_afc_field&quot;:&quot;false&quot;}}}"
+>
+(function() {
+  function loadDataLayer(elem, attrName) {
+    if (!elem) { return {}; }
+    var json = elem.getAttribute(attrName);
+    if (!json) { return {}; }
+    return JSON.parse(json);
+  }
+
+  var globalVariables = loadDataLayer(
+    document.documentElement,
+    'data-data-layer'
+  );
+  var pageSpecificVariables = loadDataLayer(
+    document.getElementById('embed-gtm-data-layer-loader'),
+    'data-data-layer-page-specific'
+  );
+
+  var variables = [globalVariables, pageSpecificVariables];
+
+  if (!window.dataLayer) {
+    window.dataLayer = [];
+  }
+
+  for (var i = 0; i < variables.length; i++) {
+    window.dataLayer.push(variables[i]);
+  }
+})();
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P4CXTW');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+  <link rel="shortcut icon" href="https://cdn.image.st-hatena.com/image/favicon/a3d34e279b010173051309346bd48195094f037d/version=1/https%3A%2F%2Fcdn.user.blog.st-hatena.com%2Fblog_custom_icon%2F130399145%2F1536714461621938">
+<link rel="icon" sizes="192x192" href="https://cdn.image.st-hatena.com/image/square/df682f1a76aaae9978e8bfbcc6843f30696410cd/backend=imagemagick;height=192;version=1;width=192/https%3A%2F%2Fcdn.user.blog.st-hatena.com%2Fblog_custom_icon%2F130399145%2F1536714461621938">
+
+  
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://mochikichi.hatenablog.com/feed"/>
+<link rel="alternate" type="application/rss+xml" title="RSS2.0" href="http://mochikichi.hatenablog.com/rss"/>
+<link rel="alternate" type="application/json+oembed" href="http://hatenablog.com/oembed?url=http%3A%2F%2Fmochikichi.hatenablog.com%2Fentry%2Frails_tutorial_like&amp;format=json" title="oEmbed Profile of Ruby on Rails いいね(like)機能拡張 (railsチュートリアル)"/>
+<link rel="alternate" type="text/xml+oembed" href="http://hatenablog.com/oembed?url=http%3A%2F%2Fmochikichi.hatenablog.com%2Fentry%2Frails_tutorial_like&amp;format=xml" title="oEmbed Profile of Ruby on Rails いいね(like)機能拡張 (railsチュートリアル)"/>
+  
+  <link rel="author" href="http://www.hatena.ne.jp/mochikichi321/">
+
+
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.blog.st-hatena.com/css/blog.css?version=59100317491bf488a0d9af0a81e58e565865b113&amp;env=production"/>
+
+    
+  <link rel="stylesheet" type="text/css" href="//blog.hatena.ne.jp/-/blog_style/10328749687211211513/ff8e16adaed18725715d107993750b435d5dd65f"/>
+  
+
+  
+
+  
+<script> </script>
+
+  
+<style>
+  div#google_afc_user,
+  div.google-afc-user-container,
+  div.google_afc_image,
+  div.google_afc_blocklink {
+      display: block !important;
+  }
+</style>
+
+
+  
+
+  <!--google自動広告-->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-7809934551469744",
+          enable_page_level_ads: true
+     });
+</script>
+
+<!-- Twitterカード指定 -->
+<meta name="twitter:card" content="summary">
+
+
+<script type="text/javascript">
+ if( location.href == 'http://mochikichi.hatenablog.com/'){
+ location.href='http://mochikichi.hatenablog.com/archive';
+}
+</script>
+<noscript>
+<p><a href="http://mochikichi.hatenablog.com/archive">新米パパの育児留学</a></p>
+</noscript>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74512363-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+  <body class="page-entry enable-top-editarea enable-bottom-editarea category-プログラミング category-プログラミング-Rails_チュートリアル">
+    
+    <div id="header-container">
+     <div id="sp-suggest" style="display: none;"><a id="sp-suggest-link" href="#">スマートフォン用の表示で見る</a></div>
+    </div>
+
+    <div id="globalheader-container"
+  data-brand="hatenablog"
+  
+  
+  >
+  <iframe id="globalheader" height="37" frameborder="0" allowTransparency="true"></iframe>
+</div>
+
+
+    <div id="container">
+      <div id="container-inner">
+        <header id="blog-title" data-brand="hatenablog">
+  <div id="blog-title-inner" >
+    <div id="blog-title-content">
+      <h1 id="title"><a href="http://mochikichi.hatenablog.com/">新米パパの育児留学</a></h1>
+      
+        <h2 id="blog-description">『育児留学』とは、育児を通して異なる視点を得たり新しいことに挑戦して自己成長に繋げること。育児奮闘中の新米パパが育児を通して得た気づきや感じたこと、育休中に習得したプログラミングに関する話題を発信していきます。</h2>
+      
+    </div>
+  </div>
+</header>
+
+        
+  <div id="top-editarea">
+    <!--グローバルメニュー-->
+<div id="menu">
+<div id="menu-inner">
+    <div id="btn-content">
+        <span id="menu-btn"><i class="blogicon-reorder"></i> MENU</span>
+    </div>
+    <ul id="menu-content">
+        <li>
+            <a href="http://mochikichi.hatenablog.com/archive/category/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">プログラミング<i class="blogicon-chevron-down"></i></a>
+            <ul class="second-content">
+                <li><a href="http://mochikichi.hatenablog.com/archive/category/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0-Rails_%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB">Railsチュートリアル</a></li>
+                <li><a href="http://mochikichi.hatenablog.com/archive/category/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0-Ruby%2FRails">Ruby/Rails</a></li>
+                <li><a href="http://mochikichi.hatenablog.com/archive/category/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0-%E3%82%AD%E3%83%A3%E3%83%AA%E3%82%A2%E6%A7%8B%E7%AF%89%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">キャリア構築プロセス</a></li>
+                <li><a href="http://mochikichi.hatenablog.com/archive/category/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0-%E8%BB%A2%E8%81%B7">転職</a></li>
+                <li><a href="http://mochikichi.hatenablog.com/archive/category/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0-Tips">Tips</a></li>               
+            </ul>
+        </li>
+        <li>
+            <a href="http://mochikichi.hatenablog.com/archive/category/%E8%82%B2%E5%85%90%E7%95%99%E5%AD%A6">育児留学<i class="blogicon-chevron-down"></i></a>
+            <ul class="second-content">
+                <li><a href="http://mochikichi.hatenablog.com/archive/category/%E8%82%B2%E5%85%90%E7%95%99%E5%AD%A6-%E8%82%B2%E5%85%90%E4%BC%91%E6%A5%AD">育児休業</a></li>
+                <li><a href="http://mochikichi.hatenablog.com/archive/category/%E8%82%B2%E5%85%90%E7%95%99%E5%AD%A6-%E8%82%B2%E5%85%90%E5%A5%AE%E9%97%98%E8%A8%98">育児奮闘記</a></li>
+            </ul>            
+        </li>
+        <li>
+            <a href="http://mochikichi.hatenablog.com/archive/category/%E3%83%AF%E3%83%BC%E3%82%AF%2F%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB">ワーク/ライフスタイル<i class="blogicon-chevron-down"></i></a>
+            <ul class="second-content">
+                <li><a href="http://mochikichi.hatenablog.com/archive/category/%E3%83%AF%E3%83%BC%E3%82%AF%2F%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB-%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB">ワークスタイル</a></li>
+                <li><a href="http://mochikichi.hatenablog.com/archive/category/%E3%83%AF%E3%83%BC%E3%82%AF%2F%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB-%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB">ライフスタイル</a></li>                
+            </ul>
+        </li>
+        <li>
+            <a href="http://mochikichi.hatenablog.com/works">活動内容</a>
+        </li>
+        <li>
+            <a href="http://mochikichi.hatenablog.com/profile">プロフィール</a>
+        </li>
+    </ul>
+</div>
+</div>
+<div style="clear:both"></div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+$(function(){
+    var menuBtn = $("#menu-btn"),
+        menuContent = $("#menu-content");
+    menuBtn.click(function(){
+        menuContent.slideToggle();
+    });
+    $(window).resize(function(){
+        var win = $(window).width(),
+            p = 960;//19
+        if(win > p){
+            menuContent.show();
+        }else{
+            menuContent.hide();
+        }
+    });
+});
+</script>
+  </div>
+
+
+        
+    <div id="top-box">
+    <div class="breadcrumb">
+      <div class="breadcrumb-inner">
+        <a class="breadcrumb-link" href="http://mochikichi.hatenablog.com/" >
+          <span>トップ</span>
+        </a>          <span class="breadcrumb-gt">
+            &gt;
+          </span>          <span class="breadcrumb-child">              <a class="breadcrumb-child-link" href="http://mochikichi.hatenablog.com/archive/category/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">
+                <span>プログラミング</span>
+              </a>          </span>            <span class="breadcrumb-gt">
+              &gt;
+            </span>          <span class="breadcrumb-child">              <span>Ruby on Rails いいね(like)機能拡張 (railsチュートリアル)</span>          </span>      </div>
+    </div>
+  </div>
+  <script type="application/ld+json" class="test-breadcrumb-json-ld">
+    {"@context":"http://schema.org","itemListElement":[{"item":{"name":"トップ","@id":"http://mochikichi.hatenablog.com/"},"position":1,"@type":"ListItem"},{"item":{"name":"プログラミング","@id":"http://mochikichi.hatenablog.com/archive/category/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0"},"position":2,"@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+
+
+        
+
+
+
+
+<div id="content" class="hfeed"
+  
+  >
+  <div id="content-inner">
+    <div id="wrapper">
+      <div id="main">
+        <div id="main-inner">
+          
+
+
+          
+  
+  <!-- google_ad_section_start -->
+  <!-- rakuten_ad_target_begin -->
+  
+  
+  
+
+  
+
+  
+    
+      
+        <article class="entry hentry js-entry-article date-first autopagerize_page_element chars-11600 words-1200 mode-markdown entry-odd" id="entry-10328749687235496920" data-keyword-campaign="" data-uuid="10328749687235496920" data-publication-type="entry">
+  <div class="entry-inner">
+    <header class="entry-header">
+  
+    <div class="date entry-date first">
+    <a href="http://mochikichi.hatenablog.com/archive/2017/04/08" rel="nofollow">
+      <time pubdate datetime="2017-04-07T22:23:31Z" title="2017-04-07T22:23:31Z">
+        <span class="date-year">2017</span><span class="hyphen">-</span><span class="date-month">04</span><span class="hyphen">-</span><span class="date-day">08</span>
+      </time>
+    </a>
+  </div>
+  <h1 class="entry-title">
+  <a href="http://mochikichi.hatenablog.com/entry/rails_tutorial_like" class="entry-title-link bookmark">Ruby on Rails いいね(like)機能拡張 (railsチュートリアル)</a>
+</h1>
+
+  
+  
+
+  <div class="entry-categories categories">
+    
+    <a href="http://mochikichi.hatenablog.com/archive/category/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" class="entry-category-link category-プログラミング">プログラミング</a>
+    
+    <a href="http://mochikichi.hatenablog.com/archive/category/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0-Rails_%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB" class="entry-category-link category-プログラミング-Rails_チュートリアル">プログラミング-Rails_チュートリアル</a>
+    
+  </div>
+
+
+  
+  <div class="customized-header">
+    <div class="entry-header-html"><!-- 1番目の見出し前にアドセンスを配置 -->
+<script>// <![CDATA[
+addEventListener("DOMContentLoaded", function() {
+var $target = $('.entry-content > h3');
+$target.eq(0).before($('.insentence-adsense'));
+}, false);
+// ]]></script>
+<div class="insentence-adsense">
+<p style='font-size:80%;color:#808080;'>スポンサーリンク</p>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- レクタングル大1 -->
+<ins class="adsbygoogle"
+  style="display:inline-block;width:336px;height:280px"
+  data-ad-client="ca-pub-7809934551469744"
+  data-ad-slot="3584596451"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!-- 1番目の見出し前にアドセンスを配置ここまで -->
+
+<!-- 3番目の見出し前にアドセンスを配置 -->
+<script>// <![CDATA[
+addEventListener("DOMContentLoaded", function() {
+var $target3 = $('.entry-content > h3');
+$target3.eq(2).before($('.insentence-adsense3'));
+}, false);
+// ]]></script>
+<div class="insentence-adsense3">
+<p style='font-size:80%;color:#808080;'>スポンサーリンク</p>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- レクタングル大2 -->
+<ins class="adsbygoogle"
+  style="display:inline-block;width:336px;height:280px"
+  data-ad-client="ca-pub-7809934551469744"
+  data-ad-slot="1150004805"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!-- 3番目の見出し前にアドセンスを配置ここまで --></div>
+  </div>
+
+
+  
+  
+<div class="social-buttons">
+  
+  
+    <div class="social-button-item">
+      <a href="http://b.hatena.ne.jp/entry/http://mochikichi.hatenablog.com/entry/rails_tutorial_like" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="この記事をはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only.gif" alt="この記事をはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+    </div>
+  
+  
+    <div class="social-button-item">
+      <div class="fb-share-button" data-layout="box_count" data-href="http://mochikichi.hatenablog.com/entry/rails_tutorial_like"></div>
+    </div>
+  
+  
+    <div class="social-button-item">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mochikichi.hatenablog.com/entry/rails_tutorial_like" data-count="vertical" data-text="Ruby on Rails いいね(like)機能拡張 (railsチュートリアル) - 新米パパの育児留学" data-lang="ja">Tweet</a>
+    </div>
+  
+  
+  
+  
+  
+    <div class="social-button-item">
+      <a data-pocket-label="pocket" data-save-url="http://mochikichi.hatenablog.com/entry/rails_tutorial_like" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a>
+    </div>
+  
+</div>
+
+
+
+</header>
+
+    
+
+    <div class="entry-content">
+  
+    <p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mochikichi321/20180912/20180912144108.jpg" alt="f:id:mochikichi321:20180912144108j:plain" title="f:id:mochikichi321:20180912144108j:plain" class="hatena-fotolife" itemprop="image"></span><a href="https://railstutorial.jp/">Ruby on Rails チュートリアル 5.0（第4版）</a>で実装したサンプルアプリケーション(+<a href="http://mochikichi.hatenablog.com/entry/2017/03/26/113022">検索機能拡張版</a>)を元に、いいね機能を拡張します。</p>
+
+<p><a href="https://px.a8.net/svt/ejp?a8mat=2ZPFR2+LFMK2+3GVA+5YRHE" target="_blank" rel="nofollow">GEEKLYのIT・WEB・ソーシャルゲーム業界への転職支援サービス</a>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=2ZPFR2+LFMK2+3GVA+5YRHE" alt=""></p>
+
+<ul class="table-of-contents">
+    <li><a href="#完成版アプリケーション">完成版アプリケーション</a></li>
+    <li><a href="#開発環境">開発環境</a></li>
+    <li><a href="#実装">実装</a><ul>
+            <li><a href="#最終的なソースコードと確認画面">最終的なソースコードと確認画面</a></li>
+            <li><a href="#実装ステップ">実装ステップ</a><ul>
+                    <li><a href="#STEP1-現状把握">STEP1 現状把握</a></li>
+                    <li><a href="#STEP2-likesテーブルを作成">STEP2 likesテーブルを作成</a></li>
+                    <li><a href="#STEP3-Micropostテーブルにlikes_countカラムを追加">STEP3 Micropostテーブルにlikes_countカラムを追加</a></li>
+                    <li><a href="#STEP4ルーティング設定">STEP4:ルーティング設定</a></li>
+                    <li><a href="#STEP5-likesコントローラーのアクションを定義">STEP5 likesコントローラーのアクションを定義</a></li>
+                    <li><a href="#STEP6-like部分テンプレートを作る">STEP6 like部分テンプレートを作る</a></li>
+                    <li><a href="#STEP7-JSファイルを作る">STEP7 JSファイルを作る</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#参考">参考</a></li>
+    <li><a href="#あわせて読みたい">あわせて読みたい</a></li>
+</ul>
+
+<h3 id="完成版アプリケーション">完成版アプリケーション</h3>
+
+<p>実際に検索機能を拡張したアプリケーションを見てみたい方はこちら。</p>
+
+<p><a href="https://fathomless-shore-36670.herokuapp.com/about">https://fathomless-shore-36670.herokuapp.com/about</a></p>
+
+<h3 id="開発環境">開発環境</h3>
+
+<p>・Rails 5.0</p>
+
+<p>・cloud9</p>
+
+<h3 id="実装">実装</h3>
+
+<h4 id="最終的なソースコードと確認画面">最終的なソースコードと確認画面</h4>
+
+<p><strong>[View]</strong>
+<b></p>
+
+<pre class="code lang-html" data-lang="html" data-unlink>[microposts/_micropost.html.erb]
+
+<span class="synIdentifier">&lt;</span><span class="synStatement">li</span><span class="synIdentifier"> </span><span class="synType">id</span><span class="synIdentifier">=</span><span class="synConstant">&quot;micropost-&lt;%= micropost.id %&gt;&quot;</span><span class="synIdentifier">&gt;</span>
+  <span class="synIdentifier">&lt;%=</span><span class="synConstant"> link_to</span><span class="synIdentifier"> gravatar_for(micropost.user, </span><span class="synType">size</span><span class="synIdentifier">: 50), micropost.user %&gt;</span>
+  <span class="synIdentifier">&lt;</span><span class="synStatement">span</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;user&quot;</span><span class="synIdentifier">&gt;&lt;%=</span><span class="synConstant"> link_to</span><span class="synIdentifier"> micropost.user.</span><span class="synType">name</span><span class="synIdentifier">, micropost.user %&gt;&lt;/</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+  <span class="synIdentifier">&lt;</span><span class="synStatement">span</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;content&quot;</span><span class="synIdentifier">&gt;</span>
+    <span class="synIdentifier">&lt;%=</span><span class="synConstant"> micropost.content</span><span class="synIdentifier"> %&gt;</span>
+    <span class="synIdentifier">&lt;%=</span><span class="synConstant"> image_tag</span><span class="synIdentifier"> micropost.picture.</span><span class="synType">url</span><span class="synIdentifier"> if micropost.picture? %&gt;</span>    
+  <span class="synIdentifier">&lt;/</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+  <span class="synIdentifier">&lt;</span><span class="synStatement">span</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;timestamp&quot;</span><span class="synIdentifier">&gt;</span>
+    Posted <span class="synIdentifier">&lt;%=</span><span class="synConstant"> time_ago_in_words(micropost.created_at)</span><span class="synIdentifier"> %&gt;</span> ago.
+    <span class="synIdentifier">&lt;% if current_user?(micropost.user) %&gt;</span>
+      <span class="synIdentifier">&lt;%=</span><span class="synConstant"> link_to</span><span class="synIdentifier"> </span><span class="synConstant">&quot;delete&quot;</span><span class="synIdentifier">, micropost, </span><span class="synType">method</span><span class="synIdentifier">: :delete,</span><span class="synType">data</span><span class="synIdentifier">: { confirm: </span><span class="synConstant">&quot;You sure?&quot;</span><span class="synIdentifier"> } %&gt;</span>
+    <span class="synIdentifier">&lt;% end %&gt;</span>
+  <span class="synIdentifier">&lt;/</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+  <span class="synComment">&lt;!--like拡張機能--&gt;</span>
+  <span class="synIdentifier">&lt;%=</span><span class="synConstant"> render</span><span class="synIdentifier"> partial: </span><span class="synConstant">'likes/like'</span><span class="synIdentifier">, locals: { micropost: micropost, likes: @likes } %&gt;</span>
+<span class="synIdentifier">&lt;/</span><span class="synStatement">li</span><span class="synIdentifier">&gt;</span>
+</pre>
+
+
+<p></b>
+<b></p>
+
+<pre class="code lang-html" data-lang="html" data-unlink>[likes/_like.html.erb]
+
+<span class="synIdentifier">&lt;% if micropost.like_user(current_user.</span><span class="synType">id</span><span class="synIdentifier">) %&gt;</span>
+  <span class="synIdentifier">&lt;%=</span><span class="synConstant"> button_to</span><span class="synIdentifier"> micropost_like_path(likes, micropost_id: micropost.</span><span class="synType">id</span><span class="synIdentifier">), </span><span class="synType">method</span><span class="synIdentifier">: :delete, </span><span class="synType">id</span><span class="synIdentifier">: </span><span class="synConstant">&quot;like-button&quot;</span><span class="synIdentifier">, remote: true do %&gt;</span> 
+    <span class="synIdentifier">&lt;%=</span><span class="synConstant"> image_tag(&quot;icon_red_heart.png&quot;)</span><span class="synIdentifier"> %&gt;</span>
+    <span class="synIdentifier">&lt;</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+      <span class="synIdentifier">&lt;%=</span><span class="synConstant"> micropost.likes_count</span><span class="synIdentifier"> %&gt;</span>
+    <span class="synIdentifier">&lt;/</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+  <span class="synIdentifier">&lt;% end %&gt;</span>
+<span class="synIdentifier">&lt;% else %&gt;</span>
+  <span class="synIdentifier">&lt;%=</span><span class="synConstant"> button_to</span><span class="synIdentifier"> micropost_likes_path(micropost),</span><span class="synType">id</span><span class="synIdentifier">: </span><span class="synConstant">&quot;like-button&quot;</span><span class="synIdentifier">, remote: true do %&gt;</span>  
+    <span class="synIdentifier">&lt;%=</span><span class="synConstant"> image_tag(&quot;icon_heart.png&quot;)</span><span class="synIdentifier"> %&gt;</span>
+    <span class="synIdentifier">&lt;</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+      <span class="synIdentifier">&lt;%=</span><span class="synConstant"> micropost.likes_count</span><span class="synIdentifier"> %&gt;</span>
+    <span class="synIdentifier">&lt;/</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+  <span class="synIdentifier">&lt;% end %&gt;</span>
+<span class="synIdentifier">&lt;% end %&gt;</span>
+</pre>
+
+
+<p></b>
+<strong>[Controller]</strong>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[users_controller.rb]
+
+<span class="synPreProc">class</span> <span class="synType">UsersController</span> &lt; <span class="synType">ApplicationController</span>
+(中略)
+  <span class="synPreProc">def</span> <span class="synIdentifier">show</span>
+    <span class="synIdentifier">@user</span> = <span class="synType">User</span>.find(params[<span class="synConstant">:id</span>])
+    <span class="synComment"># 検索拡張機能として.search(params[:search])を追加    </span>
+    <span class="synIdentifier">@microposts</span> = <span class="synIdentifier">@user</span>.microposts.paginate(<span class="synConstant">page</span>: params[<span class="synConstant">:page</span>]).search(params[<span class="synConstant">:search</span>])
+    <span class="synComment"># like拡張機能</span>
+    <span class="synIdentifier">@likes</span> = <span class="synType">Like</span>.where(<span class="synConstant">micropost_id</span>: params[<span class="synConstant">:micropost_id</span>])
+  <span class="synPreProc">end</span>
+(中略)
+<span class="synPreProc">end</span>
+</pre>
+
+
+<p></b>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[static_pages_controller.rb]
+
+<span class="synPreProc">class</span> <span class="synType">StaticPagesController</span> &lt; <span class="synType">ApplicationController</span>
+  <span class="synPreProc">def</span> <span class="synIdentifier">home</span>
+    <span class="synStatement">if</span> logged_in?
+      <span class="synIdentifier">@micropost</span>  = current_user.microposts.build
+      <span class="synComment"># 検索拡張機能として.search(params[:search])を追加 </span>
+      <span class="synIdentifier">@feed_items</span> = current_user.feed.paginate(<span class="synConstant">page</span>: params[<span class="synConstant">:page</span>]).search(params[<span class="synConstant">:search</span>])
+      <span class="synComment"># like拡張機能</span>
+      <span class="synIdentifier">@likes</span> = <span class="synType">Like</span>.where(<span class="synConstant">micropost_id</span>: params[<span class="synConstant">:micropost_id</span>])
+    <span class="synStatement">end</span>
+  <span class="synPreProc">end</span>
+(中略)
+<span class="synPreProc">end</span>
+</pre>
+
+
+<p></b>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[likes_controller.rb]
+
+<span class="synPreProc">class</span> <span class="synType">LikesController</span> &lt; <span class="synType">ApplicationController</span>
+  <span class="synPreProc">def</span> <span class="synIdentifier">create</span>
+    <span class="synIdentifier">@like</span> = <span class="synType">Like</span>.create(<span class="synConstant">user_id</span>: current_user.id, <span class="synConstant">micropost_id</span>: params[<span class="synConstant">:micropost_id</span>])
+    <span class="synIdentifier">@likes</span> = <span class="synType">Like</span>.where(<span class="synConstant">micropost_id</span>: params[<span class="synConstant">:micropost_id</span>])
+  <span class="synPreProc">end</span>
+
+  <span class="synPreProc">def</span> <span class="synIdentifier">destroy</span>
+    like = <span class="synType">Like</span>.find_by(<span class="synConstant">user_id</span>: current_user.id, <span class="synConstant">micropost_id</span>: params[<span class="synConstant">:micropost_id</span>])
+    like.destroy
+    <span class="synIdentifier">@likes</span> = <span class="synType">Like</span>.where(<span class="synConstant">micropost_id</span>: params[<span class="synConstant">:micropost_id</span>])
+  <span class="synPreProc">end</span>
+<span class="synPreProc">end</span>
+</pre>
+
+
+<p></b>
+<strong>[Model]</strong>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[models/micropost.rb]
+<span class="synPreProc">class</span> <span class="synType">Micropost</span> &lt; <span class="synType">ApplicationRecord</span>
+  belongs_to <span class="synConstant">:user</span>
+  has_many <span class="synConstant">:likes</span>, <span class="synConstant">dependent</span>: <span class="synConstant">:destroy</span>
+  default_scope -&gt; { order(<span class="synConstant">created_at</span>: <span class="synConstant">:desc</span>) }
+  mount_uploader <span class="synConstant">:picture</span>, <span class="synType">PictureUploader</span>
+  validates <span class="synConstant">:user_id</span>, <span class="synConstant">presence</span>: <span class="synConstant">true</span>
+  validates <span class="synConstant">:content</span>, <span class="synConstant">presence</span>: <span class="synConstant">true</span>, <span class="synConstant">length</span>: { <span class="synConstant">maximum</span>: <span class="synConstant">140</span> }
+  validate  <span class="synConstant">:picture_size</span>
+(中略)
+  <span class="synComment"># like拡張機能</span>
+  <span class="synPreProc">def</span> <span class="synIdentifier">like_user</span>(user_id)
+    likes.find_by(<span class="synConstant">user_id</span>: user_id)
+  <span class="synPreProc">end</span>
+
+  <span class="synStatement">private</span>
+(中略)
+<span class="synPreProc">end</span>
+</pre>
+
+
+<p></b>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[models/like.rb]
+<span class="synPreProc">class</span> <span class="synType">Like</span> &lt; <span class="synType">ActiveRecord</span>::<span class="synType">Base</span>
+  belongs_to <span class="synConstant">:micropost</span>, <span class="synConstant">counter_cache</span>: <span class="synConstant">:likes_count</span>
+  belongs_to <span class="synConstant">:user</span>
+<span class="synPreProc">end</span>
+</pre>
+
+
+<p></b>
+<strong>[JS]</strong>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[likes/create.js.erb]
+<span class="synError">$(</span><span class="synSpecial">&quot;</span><span class="synConstant">#like-buttons</span><span class="synSpecial">&quot;</span>).html(<span class="synSpecial">&quot;</span><span class="synConstant">&lt;%= j(render partial: 'like', locals: { micropost: micropost, likes: @likes, like: @like}) %&gt;</span><span class="synSpecial">&quot;</span>);
+</pre>
+
+
+<p></b>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[likes/destroy.js.erb]
+<span class="synError">$(</span><span class="synSpecial">&quot;</span><span class="synConstant">#like-buttons</span><span class="synSpecial">&quot;</span>).html(<span class="synSpecial">&quot;</span><span class="synConstant">&lt;%= j(render partial: 'like', locals: { micropost: micropost, likes: @likes }) %&gt;</span><span class="synSpecial">&quot;</span>);
+</pre>
+
+
+<p></b>
+<strong>[Routes]</strong>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[routes.rb]
+<span class="synType">Rails</span>.application.routes.draw <span class="synStatement">do</span>
+  get <span class="synSpecial">'</span><span class="synConstant">password_resets/new</span><span class="synSpecial">'</span>
+
+  get <span class="synSpecial">'</span><span class="synConstant">password_resets/edit</span><span class="synSpecial">'</span>
+
+  root   <span class="synSpecial">'</span><span class="synConstant">static_pages#home</span><span class="synSpecial">'</span>
+  get    <span class="synSpecial">'</span><span class="synConstant">/help</span><span class="synSpecial">'</span>,    <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">static_pages#help</span><span class="synSpecial">'</span>
+  get    <span class="synSpecial">'</span><span class="synConstant">/about</span><span class="synSpecial">'</span>,   <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">static_pages#about</span><span class="synSpecial">'</span>
+  get    <span class="synSpecial">'</span><span class="synConstant">/contact</span><span class="synSpecial">'</span>, <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">static_pages#contact</span><span class="synSpecial">'</span>
+  get    <span class="synSpecial">'</span><span class="synConstant">/signup</span><span class="synSpecial">'</span>,  <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">users#new</span><span class="synSpecial">'</span>
+  post   <span class="synSpecial">'</span><span class="synConstant">/signup</span><span class="synSpecial">'</span>,  <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">users#create</span><span class="synSpecial">'</span>  
+  get    <span class="synSpecial">'</span><span class="synConstant">/login</span><span class="synSpecial">'</span>,   <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">sessions#new</span><span class="synSpecial">'</span>
+  post   <span class="synSpecial">'</span><span class="synConstant">/login</span><span class="synSpecial">'</span>,   <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">sessions#create</span><span class="synSpecial">'</span>
+  delete <span class="synSpecial">'</span><span class="synConstant">/logout</span><span class="synSpecial">'</span>,  <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">sessions#destroy</span><span class="synSpecial">'</span>
+  resources <span class="synConstant">:users</span> <span class="synStatement">do</span>
+    member <span class="synStatement">do</span>
+      get <span class="synConstant">:following</span>, <span class="synConstant">:followers</span>
+    <span class="synStatement">end</span>
+  <span class="synStatement">end</span>
+  resources <span class="synConstant">:account_activations</span>, <span class="synConstant">only</span>: [<span class="synConstant">:edit</span>]
+  resources <span class="synConstant">:password_resets</span>,     <span class="synConstant">only</span>: [<span class="synConstant">:new</span>, <span class="synConstant">:create</span>, <span class="synConstant">:edit</span>, <span class="synConstant">:update</span>]
+  resources <span class="synConstant">:relationships</span>,       <span class="synConstant">only</span>: [<span class="synConstant">:create</span>, <span class="synConstant">:destroy</span>]
+
+<span class="synComment">#like機能拡張用に指定</span>
+  resources <span class="synConstant">:microposts</span> <span class="synStatement">do</span>
+    resources <span class="synConstant">:likes</span>, <span class="synConstant">only</span>: [<span class="synConstant">:create</span>, <span class="synConstant">:destroy</span>]
+  <span class="synStatement">end</span>
+
+<span class="synStatement">end</span>
+</pre>
+
+
+<p></b></p>
+
+<p>【Usersページ】
+<span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mochikichi321/20170408/20170408065023.png" alt="f:id:mochikichi321:20170408065023p:plain" title="f:id:mochikichi321:20170408065023p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>【Homeページ】
+<span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mochikichi321/20170408/20170408065030.png" alt="f:id:mochikichi321:20170408065030p:plain" title="f:id:mochikichi321:20170408065030p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p><a href="https://px.a8.net/svt/ejp?a8mat=2TRM0W+2BCPGY+3UES+BXIYP" target="_blank" rel="nofollow">
+<img border="0" width="100%" max-width="468px" height="auto" max-height="60px" alt="" src="https://www22.a8.net/svt/bgt?aid=170929472140&wid=001&eno=01&mid=s00000017938002004000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=2TRM0W+2BCPGY+3UES+BXIYP" alt=""></p>
+
+<h4 id="実装ステップ">実装ステップ</h4>
+
+<h5 id="STEP1-現状把握">STEP1 現状把握</h5>
+
+<p>まず、現時点での[View],[Controller],[Model]及び[Routes]はこのようになっている。</p>
+
+<p><strong>[View]</strong>
+<b></p>
+
+<pre class="code lang-html" data-lang="html" data-unlink>[microposts/_micropost.html.erb]
+
+<span class="synIdentifier">&lt;</span><span class="synStatement">li</span><span class="synIdentifier"> </span><span class="synType">id</span><span class="synIdentifier">=</span><span class="synConstant">&quot;micropost-&lt;%= micropost.id %&gt;&quot;</span><span class="synIdentifier">&gt;</span>
+  <span class="synIdentifier">&lt;%=</span><span class="synConstant"> link_to</span><span class="synIdentifier"> gravatar_for(micropost.user, </span><span class="synType">size</span><span class="synIdentifier">: 50), micropost.user %&gt;</span>
+  <span class="synIdentifier">&lt;</span><span class="synStatement">span</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;user&quot;</span><span class="synIdentifier">&gt;&lt;%=</span><span class="synConstant"> link_to</span><span class="synIdentifier"> micropost.user.</span><span class="synType">name</span><span class="synIdentifier">, micropost.user %&gt;&lt;/</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+  <span class="synIdentifier">&lt;</span><span class="synStatement">span</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;content&quot;</span><span class="synIdentifier">&gt;</span>
+    <span class="synIdentifier">&lt;%=</span><span class="synConstant"> micropost.content</span><span class="synIdentifier"> %&gt;</span>
+    <span class="synIdentifier">&lt;%=</span><span class="synConstant"> image_tag</span><span class="synIdentifier"> micropost.picture.</span><span class="synType">url</span><span class="synIdentifier"> if micropost.picture? %&gt;</span>    
+  <span class="synIdentifier">&lt;/</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+  <span class="synIdentifier">&lt;</span><span class="synStatement">span</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;timestamp&quot;</span><span class="synIdentifier">&gt;</span>
+    Posted <span class="synIdentifier">&lt;%=</span><span class="synConstant"> time_ago_in_words(micropost.created_at)</span><span class="synIdentifier"> %&gt;</span> ago.
+    <span class="synIdentifier">&lt;% if current_user?(micropost.user) %&gt;</span>
+      <span class="synIdentifier">&lt;%=</span><span class="synConstant"> link_to</span><span class="synIdentifier"> </span><span class="synConstant">&quot;delete&quot;</span><span class="synIdentifier">, micropost, </span><span class="synType">method</span><span class="synIdentifier">: :delete,</span>
+<span class="synIdentifier">                                       </span><span class="synType">data</span><span class="synIdentifier">: { confirm: </span><span class="synConstant">&quot;You sure?&quot;</span><span class="synIdentifier"> } %&gt;</span>
+    <span class="synIdentifier">&lt;% end %&gt;</span>
+  <span class="synIdentifier">&lt;/</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+
+#ここへlike拡張機能追加予定
+
+<span class="synIdentifier">&lt;/</span><span class="synStatement">li</span><span class="synIdentifier">&gt;</span>
+</pre>
+
+
+<p></b>
+<strong>[Controller]</strong>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[users_controller.rb]
+
+<span class="synPreProc">class</span> <span class="synType">UsersController</span> &lt; <span class="synType">ApplicationController</span>
+(中略)
+  <span class="synPreProc">def</span> <span class="synIdentifier">show</span>
+    <span class="synIdentifier">@user</span> = <span class="synType">User</span>.find(params[<span class="synConstant">:id</span>])
+    <span class="synComment"># 検索拡張機能として.search(params[:search])を追加    </span>
+    <span class="synIdentifier">@microposts</span> = <span class="synIdentifier">@user</span>.microposts.paginate(<span class="synConstant">page</span>: params[<span class="synConstant">:page</span>]).search(params[<span class="synConstant">:search</span>])
+  <span class="synPreProc">end</span>
+(中略)
+<span class="synPreProc">end</span>
+</pre>
+
+
+<p></b>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[static_pages_controller.rb]
+
+<span class="synPreProc">class</span> <span class="synType">StaticPagesController</span> &lt; <span class="synType">ApplicationController</span>
+  <span class="synPreProc">def</span> <span class="synIdentifier">home</span>
+    <span class="synStatement">if</span> logged_in?
+      <span class="synIdentifier">@micropost</span>  = current_user.microposts.build
+      <span class="synComment"># 検索拡張機能として.search(params[:search])を追加 </span>
+      <span class="synIdentifier">@feed_items</span> = current_user.feed.paginate(<span class="synConstant">page</span>: params[<span class="synConstant">:page</span>]).search(params[<span class="synConstant">:search</span>])
+    <span class="synStatement">end</span>
+  <span class="synPreProc">end</span>
+(中略)
+<span class="synPreProc">end</span>
+</pre>
+
+
+<p></b></p>
+
+<p><strong>[Model]</strong>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[models/micropost.rb]
+
+<span class="synPreProc">class</span> <span class="synType">Micropost</span> &lt; <span class="synType">ApplicationRecord</span>
+  belongs_to <span class="synConstant">:user</span>
+  has_many <span class="synConstant">:likes</span>, <span class="synConstant">dependent</span>: <span class="synConstant">:destroy</span>
+  default_scope -&gt; { order(<span class="synConstant">created_at</span>: <span class="synConstant">:desc</span>) }
+  mount_uploader <span class="synConstant">:picture</span>, <span class="synType">PictureUploader</span>
+  validates <span class="synConstant">:user_id</span>, <span class="synConstant">presence</span>: <span class="synConstant">true</span>
+  validates <span class="synConstant">:content</span>, <span class="synConstant">presence</span>: <span class="synConstant">true</span>, <span class="synConstant">length</span>: { <span class="synConstant">maximum</span>: <span class="synConstant">140</span> }
+  validate  <span class="synConstant">:picture_size</span>
+(中略)
+<span class="synPreProc">end</span>
+</pre>
+
+
+<p></b></p>
+
+<p><strong>[Routes]</strong>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[routes.rb]
+
+<span class="synType">Rails</span>.application.routes.draw <span class="synStatement">do</span>
+  get <span class="synSpecial">'</span><span class="synConstant">password_resets/new</span><span class="synSpecial">'</span>
+
+  get <span class="synSpecial">'</span><span class="synConstant">password_resets/edit</span><span class="synSpecial">'</span>
+
+  root   <span class="synSpecial">'</span><span class="synConstant">static_pages#home</span><span class="synSpecial">'</span>
+  get    <span class="synSpecial">'</span><span class="synConstant">/help</span><span class="synSpecial">'</span>,    <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">static_pages#help</span><span class="synSpecial">'</span>
+  get    <span class="synSpecial">'</span><span class="synConstant">/about</span><span class="synSpecial">'</span>,   <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">static_pages#about</span><span class="synSpecial">'</span>
+  get    <span class="synSpecial">'</span><span class="synConstant">/contact</span><span class="synSpecial">'</span>, <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">static_pages#contact</span><span class="synSpecial">'</span>
+  get    <span class="synSpecial">'</span><span class="synConstant">/signup</span><span class="synSpecial">'</span>,  <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">users#new</span><span class="synSpecial">'</span>
+  post   <span class="synSpecial">'</span><span class="synConstant">/signup</span><span class="synSpecial">'</span>,  <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">users#create</span><span class="synSpecial">'</span>  
+  get    <span class="synSpecial">'</span><span class="synConstant">/login</span><span class="synSpecial">'</span>,   <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">sessions#new</span><span class="synSpecial">'</span>
+  post   <span class="synSpecial">'</span><span class="synConstant">/login</span><span class="synSpecial">'</span>,   <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">sessions#create</span><span class="synSpecial">'</span>
+  delete <span class="synSpecial">'</span><span class="synConstant">/logout</span><span class="synSpecial">'</span>,  <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">sessions#destroy</span><span class="synSpecial">'</span>
+  resources <span class="synConstant">:users</span> <span class="synStatement">do</span>
+    member <span class="synStatement">do</span>
+      get <span class="synConstant">:following</span>, <span class="synConstant">:followers</span>
+    <span class="synStatement">end</span>
+  <span class="synStatement">end</span>
+  resources <span class="synConstant">:account_activations</span>, <span class="synConstant">only</span>: [<span class="synConstant">:edit</span>]
+  resources <span class="synConstant">:password_resets</span>,     <span class="synConstant">only</span>: [<span class="synConstant">:new</span>, <span class="synConstant">:create</span>, <span class="synConstant">:edit</span>, <span class="synConstant">:update</span>]
+  resources <span class="synConstant">:microposts</span>,          <span class="synConstant">only</span>: [<span class="synConstant">:create</span>, <span class="synConstant">:destroy</span>]
+  resources <span class="synConstant">:relationships</span>,       <span class="synConstant">only</span>: [<span class="synConstant">:create</span>, <span class="synConstant">:destroy</span>]
+<span class="synStatement">end</span>
+</pre>
+
+
+<p></b></p>
+
+<h5 id="STEP2-likesテーブルを作成">STEP2 likesテーブルを作成</h5>
+
+<p>ターミナルでlikesテーブルを作成。カラムはinteger型でuser_idとmicropost_idを追加。
+<b></p>
+
+<pre class="code" data-lang="" data-unlink>$ rails g model Like user_id:integer micropost_id:integer                                       </pre>
+
+
+<p></b>
+作成したLikeモデルに以下を記載。
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[models/like.rb]
+
+<span class="synPreProc">class</span> <span class="synType">Like</span> &lt; <span class="synType">ActiveRecord</span>
+  belongs_to <span class="synConstant">:micropost</span>, <span class="synConstant">counter_cache</span>: <span class="synConstant">:likes_count</span>
+  belongs_to <span class="synConstant">:user</span>
+<span class="synPreProc">end</span>
+</pre>
+
+
+<p></b>
+counter_cahce: :likes_countは、子モデル(リレーションされているlike)の数を親モデルのカラム(micropostのlikes_count)に保存を意味する。なので、likes_countカラムをMicropostテーブルに追加する。</p>
+
+<p><a href="http://railsdoc.com/references/counter_cache">counter_cahceとは？</a></p>
+
+<h5 id="STEP3-Micropostテーブルにlikes_countカラムを追加">STEP3 Micropostテーブルにlikes_countカラムを追加</h5>
+
+<p>Micropostテーブルにinteger型のlikes_countというカラムを追加する。
+<b></p>
+
+<pre class="code" data-lang="" data-unlink>$ rails g migration add_likes_count_to_microposts likes_count:integer</pre>
+
+
+<p></b>
+<b></p>
+
+<pre class="code" data-lang="" data-unlink>$ rails db:migrate</pre>
+
+
+<p></b>
+さらに同モデルファイルに以下を記載する。
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[models/micropost.rb]
+
+<span class="synPreProc">class</span> <span class="synType">Micropost</span> &lt; <span class="synType">ApplicationRecord</span>
+  belongs_to <span class="synConstant">:user</span>
+  has_many <span class="synConstant">:likes</span>, <span class="synConstant">dependent</span>: <span class="synConstant">:destroy</span>
+(中略)
+  <span class="synPreProc">def</span> <span class="synIdentifier">like_user</span>(user_id)
+   likes.find_by(<span class="synConstant">user_id</span>: user_id)
+  <span class="synPreProc">end</span>
+
+  <span class="synStatement">private</span>
+(中略)
+<span class="synPreProc">end</span>
+</pre>
+
+
+<p></b></p>
+
+<p>like_userメソッドは指定のユーザーが既にマイクロポストにいいねしているかを確認するメソッド。</p>
+
+<h5 id="STEP4ルーティング設定">STEP4:ルーティング設定</h5>
+
+<p>resourcesを使いmicropostsとlikesの構造を規定。
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[routes.rb]
+
+<span class="synType">Rails</span>.application.routes.draw <span class="synStatement">do</span>
+  get <span class="synSpecial">'</span><span class="synConstant">password_resets/new</span><span class="synSpecial">'</span>
+
+  get <span class="synSpecial">'</span><span class="synConstant">password_resets/edit</span><span class="synSpecial">'</span>
+
+  root   <span class="synSpecial">'</span><span class="synConstant">static_pages#home</span><span class="synSpecial">'</span>
+  get    <span class="synSpecial">'</span><span class="synConstant">/help</span><span class="synSpecial">'</span>,    <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">static_pages#help</span><span class="synSpecial">'</span>
+  get    <span class="synSpecial">'</span><span class="synConstant">/about</span><span class="synSpecial">'</span>,   <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">static_pages#about</span><span class="synSpecial">'</span>
+  get    <span class="synSpecial">'</span><span class="synConstant">/contact</span><span class="synSpecial">'</span>, <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">static_pages#contact</span><span class="synSpecial">'</span>
+  get    <span class="synSpecial">'</span><span class="synConstant">/signup</span><span class="synSpecial">'</span>,  <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">users#new</span><span class="synSpecial">'</span>
+  post   <span class="synSpecial">'</span><span class="synConstant">/signup</span><span class="synSpecial">'</span>,  <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">users#create</span><span class="synSpecial">'</span>  
+  get    <span class="synSpecial">'</span><span class="synConstant">/login</span><span class="synSpecial">'</span>,   <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">sessions#new</span><span class="synSpecial">'</span>
+  post   <span class="synSpecial">'</span><span class="synConstant">/login</span><span class="synSpecial">'</span>,   <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">sessions#create</span><span class="synSpecial">'</span>
+  delete <span class="synSpecial">'</span><span class="synConstant">/logout</span><span class="synSpecial">'</span>,  <span class="synConstant">to</span>: <span class="synSpecial">'</span><span class="synConstant">sessions#destroy</span><span class="synSpecial">'</span>
+  resources <span class="synConstant">:users</span> <span class="synStatement">do</span>
+    member <span class="synStatement">do</span>
+      get <span class="synConstant">:following</span>, <span class="synConstant">:followers</span>
+    <span class="synStatement">end</span>
+  <span class="synStatement">end</span>
+  resources <span class="synConstant">:account_activations</span>, <span class="synConstant">only</span>: [<span class="synConstant">:edit</span>]
+  resources <span class="synConstant">:password_resets</span>,     <span class="synConstant">only</span>: [<span class="synConstant">:new</span>, <span class="synConstant">:create</span>, <span class="synConstant">:edit</span>, <span class="synConstant">:update</span>]
+<span class="synComment">#削除</span>
+  resources <span class="synConstant">:relationships</span>,       <span class="synConstant">only</span>: [<span class="synConstant">:create</span>, <span class="synConstant">:destroy</span>]
+
+<span class="synComment">#like機能拡張用に指定</span>
+  resources <span class="synConstant">:microposts</span> <span class="synStatement">do</span>
+    resources <span class="synConstant">:likes</span>, <span class="synConstant">only</span>: [<span class="synConstant">:create</span>, <span class="synConstant">:destroy</span>]
+  <span class="synStatement">end</span>
+
+<span class="synStatement">end</span>
+</pre>
+
+
+<p></b></p>
+
+<h5 id="STEP5-likesコントローラーのアクションを定義">STEP5 likesコントローラーのアクションを定義</h5>
+
+<p>likes controllerを作成し、そのファイルに以下を記載する。
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[likes_controller.rb]
+
+<span class="synPreProc">class</span> <span class="synType">LikesController</span> &lt; <span class="synType">ApplicationController</span>
+  <span class="synPreProc">def</span> <span class="synIdentifier">create</span>
+    <span class="synIdentifier">@like</span> = <span class="synType">Like</span>.create(<span class="synConstant">user_id</span>: current_user.id, <span class="synConstant">micropost_id</span>: params[<span class="synConstant">:micropost_id</span>])
+    <span class="synIdentifier">@likes</span> = <span class="synType">Like</span>.where(<span class="synConstant">micropost_id</span>: params[<span class="synConstant">:micropost_id</span>])
+  <span class="synPreProc">end</span>
+
+  <span class="synPreProc">def</span> <span class="synIdentifier">destroy</span>
+    like = <span class="synType">Like</span>.find_by(<span class="synConstant">user_id</span>: current_user.id, <span class="synConstant">micropost_id</span>: params[<span class="synConstant">:micropost_id</span>])
+    like.destroy
+    <span class="synIdentifier">@likes</span> = <span class="synType">Like</span>.where(<span class="synConstant">micropost_id</span>: params[<span class="synConstant">:micropost_id</span>])
+  <span class="synPreProc">end</span>
+<span class="synPreProc">end</span>
+</pre>
+
+
+<p></b>
+likeを増やしたり消したりするlikeとその後の合計like数を表示するための@likesを定義。</p>
+
+<p>合わせて、usersコントローラーとstatic_pagesコントローラーにも@likesを定義。
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[users_controller.rb]
+
+<span class="synPreProc">class</span> <span class="synType">UsersController</span> &lt; <span class="synType">ApplicationController</span>
+(中略)
+  <span class="synPreProc">def</span> <span class="synIdentifier">show</span>
+    <span class="synIdentifier">@user</span> = <span class="synType">User</span>.find(params[<span class="synConstant">:id</span>])
+    <span class="synComment"># 検索拡張機能として.search(params[:search])を追加    </span>
+    <span class="synIdentifier">@microposts</span> = <span class="synIdentifier">@user</span>.microposts.paginate(<span class="synConstant">page</span>: params[<span class="synConstant">:page</span>]).search(params[<span class="synConstant">:search</span>])
+    <span class="synComment"># like拡張機能</span>
+    <span class="synIdentifier">@likes</span> = <span class="synType">Like</span>.where(<span class="synConstant">micropost_id</span>: params[<span class="synConstant">:micropost_id</span>])
+  <span class="synPreProc">end</span>
+(中略)
+<span class="synPreProc">end</span>
+</pre>
+
+
+<p></b>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[static_pages_controller.rb]
+
+<span class="synPreProc">class</span> <span class="synType">StaticPagesController</span> &lt; <span class="synType">ApplicationController</span>
+  <span class="synPreProc">def</span> <span class="synIdentifier">home</span>
+    <span class="synStatement">if</span> logged_in?
+      <span class="synIdentifier">@micropost</span>  = current_user.microposts.build
+      <span class="synComment"># 検索拡張機能として.search(params[:search])を追加 </span>
+      <span class="synIdentifier">@feed_items</span> = current_user.feed.paginate(<span class="synConstant">page</span>: params[<span class="synConstant">:page</span>]).search(params[<span class="synConstant">:search</span>])
+      <span class="synComment"># like拡張機能</span>
+      <span class="synIdentifier">@likes</span> = <span class="synType">Like</span>.where(<span class="synConstant">micropost_id</span>: params[<span class="synConstant">:micropost_id</span>])
+    <span class="synStatement">end</span>
+  <span class="synPreProc">end</span>
+(中略)
+<span class="synPreProc">end</span>
+</pre>
+
+
+<p></b></p>
+
+<h5 id="STEP6-like部分テンプレートを作る">STEP6 like部分テンプレートを作る</h5>
+
+<p>今回はいいねボタンを部分テンプレートを使って作る。</p>
+
+<p>STEP3で定義したlike_userメソッドを使用し、指定ユーザーがマイクロポストにいいねしているかを判断し、表示を切り分ける。いいねしていたら赤色のハート、いいねしていなければ灰色のハートを表示。</p>
+
+<p>likesのモデルファイルでcounter_cacheの記述があるので、micropost.likes_countとするだけでそのマイクロポストに結びつくlike数が表示される。</p>
+
+<p>どちらのアクションのパスもremote: trueの記述をしてajaxを使いアクションを実行する。</p>
+
+<p>icon_red_heard.pngがいいね後の赤色のハート、icon_heart.pngがいいね前の灰色のハート。画像を準備して"assets/images"フォルダの中にそれぞれ保存をしておく。</p>
+
+<p>[画像サンプル]</p>
+
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mochikichi321/20170408/20170408070249.png" alt="f:id:mochikichi321:20170408070249p:plain" title="f:id:mochikichi321:20170408070249p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mochikichi321/20170408/20170408070253.png" alt="f:id:mochikichi321:20170408070253p:plain" title="f:id:mochikichi321:20170408070253p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p><b></p>
+
+<pre class="code lang-html" data-lang="html" data-unlink>[likes/_like.html.erb]
+
+<span class="synIdentifier">&lt;% if micropost.like_user(current_user.</span><span class="synType">id</span><span class="synIdentifier">) %&gt;</span>
+  <span class="synIdentifier">&lt;%=</span><span class="synConstant"> button_to</span><span class="synIdentifier"> micropost_like_path(likes, micropost_id: micropost.</span><span class="synType">id</span><span class="synIdentifier">), </span><span class="synType">method</span><span class="synIdentifier">: :delete, </span><span class="synType">id</span><span class="synIdentifier">: </span><span class="synConstant">&quot;like-button&quot;</span><span class="synIdentifier">, remote: true do %&gt;</span> 
+    <span class="synIdentifier">&lt;%=</span><span class="synConstant"> image_tag(&quot;icon_red_heart.png&quot;)</span><span class="synIdentifier"> %&gt;</span>
+    <span class="synIdentifier">&lt;</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+      <span class="synIdentifier">&lt;%=</span><span class="synConstant"> micropost.likes_count</span><span class="synIdentifier"> %&gt;</span>
+    <span class="synIdentifier">&lt;/</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+  <span class="synIdentifier">&lt;% end %&gt;</span>
+<span class="synIdentifier">&lt;% else %&gt;</span>
+  <span class="synIdentifier">&lt;%=</span><span class="synConstant"> button_to</span><span class="synIdentifier"> micropost_likes_path(micropost),</span><span class="synType">id</span><span class="synIdentifier">: </span><span class="synConstant">&quot;like-button&quot;</span><span class="synIdentifier">, remote: true do %&gt;</span>  
+    <span class="synIdentifier">&lt;%=</span><span class="synConstant"> image_tag(&quot;icon_heart.png&quot;)</span><span class="synIdentifier"> %&gt;</span>
+    <span class="synIdentifier">&lt;</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+      <span class="synIdentifier">&lt;%=</span><span class="synConstant"> micropost.likes_count</span><span class="synIdentifier"> %&gt;</span>
+    <span class="synIdentifier">&lt;/</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+  <span class="synIdentifier">&lt;% end %&gt;</span>
+<span class="synIdentifier">&lt;% end %&gt;</span>
+</pre>
+
+
+<p></b>
+like部分テンプレートを表示したい箇所に挿入する。
+<b></p>
+
+<pre class="code lang-html" data-lang="html" data-unlink>[microposts/_micropost.html.erb]
+
+<span class="synIdentifier">&lt;</span><span class="synStatement">li</span><span class="synIdentifier"> </span><span class="synType">id</span><span class="synIdentifier">=</span><span class="synConstant">&quot;micropost-&lt;%= micropost.id %&gt;&quot;</span><span class="synIdentifier">&gt;</span>
+  <span class="synIdentifier">&lt;%=</span><span class="synConstant"> link_to</span><span class="synIdentifier"> gravatar_for(micropost.user, </span><span class="synType">size</span><span class="synIdentifier">: 50), micropost.user %&gt;</span>
+  <span class="synIdentifier">&lt;</span><span class="synStatement">span</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;user&quot;</span><span class="synIdentifier">&gt;&lt;%=</span><span class="synConstant"> link_to</span><span class="synIdentifier"> micropost.user.</span><span class="synType">name</span><span class="synIdentifier">, micropost.user %&gt;&lt;/</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+  <span class="synIdentifier">&lt;</span><span class="synStatement">span</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;content&quot;</span><span class="synIdentifier">&gt;</span>
+    <span class="synIdentifier">&lt;%=</span><span class="synConstant"> micropost.content</span><span class="synIdentifier"> %&gt;</span>
+    <span class="synIdentifier">&lt;%=</span><span class="synConstant"> image_tag</span><span class="synIdentifier"> micropost.picture.</span><span class="synType">url</span><span class="synIdentifier"> if micropost.picture? %&gt;</span>    
+  <span class="synIdentifier">&lt;/</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+  <span class="synIdentifier">&lt;</span><span class="synStatement">span</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;timestamp&quot;</span><span class="synIdentifier">&gt;</span>
+    Posted <span class="synIdentifier">&lt;%=</span><span class="synConstant"> time_ago_in_words(micropost.created_at)</span><span class="synIdentifier"> %&gt;</span> ago.
+    <span class="synIdentifier">&lt;% if current_user?(micropost.user) %&gt;</span>
+      <span class="synIdentifier">&lt;%=</span><span class="synConstant"> link_to</span><span class="synIdentifier"> </span><span class="synConstant">&quot;delete&quot;</span><span class="synIdentifier">, micropost, </span><span class="synType">method</span><span class="synIdentifier">: :delete,</span>
+<span class="synIdentifier">                                       </span><span class="synType">data</span><span class="synIdentifier">: { confirm: </span><span class="synConstant">&quot;You sure?&quot;</span><span class="synIdentifier"> } %&gt;</span>
+    <span class="synIdentifier">&lt;% end %&gt;</span>
+  <span class="synIdentifier">&lt;/</span><span class="synStatement">span</span><span class="synIdentifier">&gt;</span>
+  <span class="synComment">&lt;!--like拡張機能--&gt;</span>
+  <span class="synIdentifier">&lt;%=</span><span class="synConstant"> render</span><span class="synIdentifier"> partial: </span><span class="synConstant">'likes/like'</span><span class="synIdentifier">, locals: { micropost: micropost, likes: @likes } %&gt;</span>
+
+<span class="synIdentifier">&lt;/</span><span class="synStatement">li</span><span class="synIdentifier">&gt;</span>
+</pre>
+
+
+<p></b></p>
+
+<h5 id="STEP7-JSファイルを作る">STEP7 JSファイルを作る</h5>
+
+<p>ajaxを使ってページ遷移をせずにいいねを増やしたり消したりするjavascriptファイルを作る。
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[likes/create.js.erb]
+
+<span class="synError">$(</span><span class="synSpecial">&quot;</span><span class="synConstant">#like-buttons</span><span class="synSpecial">&quot;</span>).html(<span class="synSpecial">&quot;</span><span class="synConstant">&lt;%= j(render partial: 'like', locals: { micropost: micropost, likes: @likes, like: @like}) %&gt;</span><span class="synSpecial">&quot;</span>);
+</pre>
+
+
+<p></b>
+<b></p>
+
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>[likes/destroy.js.erb]
+
+<span class="synError">$(</span><span class="synSpecial">&quot;</span><span class="synConstant">#like-buttons</span><span class="synSpecial">&quot;</span>).html(<span class="synSpecial">&quot;</span><span class="synConstant">&lt;%= j(render partial: 'like', locals: { micropost: micropost, likes: @likes }) %&gt;</span><span class="synSpecial">&quot;</span>);
+</pre>
+
+
+<p></b>
+以上で簡易like機能の実装が完了。</p>
+
+<p><a href="https://px.a8.net/svt/ejp?a8mat=2ZPFR2+LFMK2+3GVA+5YRHE" target="_blank" rel="nofollow">GEEKLYのIT・WEB・ソーシャルゲーム業界への転職支援サービス</a>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=2ZPFR2+LFMK2+3GVA+5YRHE" alt=""></p>
+
+<h1 id="参考">参考</h1>
+
+<p>・<a href="http://qiita.com/YuitoSato/items/94913d6a349a530b2ea2">http://qiita.com/YuitoSato/items/94913d6a349a530b2ea2</a></p>
+
+<h1 id="あわせて読みたい">あわせて読みたい</h1>
+
+<p><iframe src="https://hatenablog-parts.com/embed?url=http%3A%2F%2Fmochikichi.hatenablog.com%2Fentry%2Fcareer_change" title="30代未経験からWebエンジニア(Ruby)に転職した私のロードマップを公開します - 新米パパの育児留学" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;"></iframe><cite class="hatena-citation"><a href="http://mochikichi.hatenablog.com/entry/career_change">mochikichi.hatenablog.com</a></cite></p>
+
+<p><iframe src="https://hatenablog-parts.com/embed?url=http%3A%2F%2Fmochikichi.hatenablog.com%2Fentry%2Frails_tutorial_guide" title="Ruby on Rails チュートリアル 完全攻略 概要と演習解答総まとめ - 新米パパの育児留学" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;"></iframe><cite class="hatena-citation"><a href="http://mochikichi.hatenablog.com/entry/rails_tutorial_guide">mochikichi.hatenablog.com</a></cite></p>
+
+<p><iframe src="https://hatenablog-parts.com/embed?url=http%3A%2F%2Fmochikichi.hatenablog.com%2Fentry%2Fruby-book" title="Ruby初心者におすすめの学習方法「プロを目指す人のためのRuby入門」 - 新米パパの育児留学" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;"></iframe><cite class="hatena-citation"><a href="http://mochikichi.hatenablog.com/entry/ruby-book">mochikichi.hatenablog.com</a></cite></p>
+
+    
+
+  
+</div>
+
+    
+  <footer class="entry-footer">
+    
+    <p class="entry-footer-section">
+  <span class="author vcard"><span class="fn" data-load-nickname="1" data-user-name="mochikichi321">mochikichi321</span></span>
+  <span class="entry-footer-time"><a href="http://mochikichi.hatenablog.com/entry/rails_tutorial_like"><time data-relative datetime="2017-04-07T22:23:31Z" title="2017-04-07T22:23:31Z" pubdate class="updated">2017-04-08 07:23</time></a></span>
+</p>
+
+    
+
+    
+<div class="social-buttons">
+  
+  
+    <div class="social-button-item">
+      <a href="http://b.hatena.ne.jp/entry/http://mochikichi.hatenablog.com/entry/rails_tutorial_like" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="この記事をはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only.gif" alt="この記事をはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+    </div>
+  
+  
+    <div class="social-button-item">
+      <div class="fb-share-button" data-layout="box_count" data-href="http://mochikichi.hatenablog.com/entry/rails_tutorial_like"></div>
+    </div>
+  
+  
+    <div class="social-button-item">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mochikichi.hatenablog.com/entry/rails_tutorial_like" data-count="vertical" data-text="Ruby on Rails いいね(like)機能拡張 (railsチュートリアル) - 新米パパの育児留学" data-lang="ja">Tweet</a>
+    </div>
+  
+  
+  
+  
+  
+    <div class="social-button-item">
+      <a data-pocket-label="pocket" data-save-url="http://mochikichi.hatenablog.com/entry/rails_tutorial_like" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a>
+    </div>
+  
+</div>
+
+    
+
+    <div class="customized-footer">
+      
+
+        
+
+        
+
+        
+        
+  <div class="entry-footer-html"><div id="ads" style="width:692px;">
+    <div style="font-size:80%;color:#808080;">スポンサーリンク</div>
+    <div style="float:left;width:336px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- レクタングル（大）1 -->
+<ins class="adsbygoogle"
+  style="display:inline-block;width:336px;height:280px"
+  data-ad-client="ca-pub-7809934551469744"
+  data-ad-slot="6010506912"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+    <div style="float:right;width:336px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- レクタングル（大）2 -->
+<ins class="adsbygoogle"
+  style="display:inline-block;width:336px;height:280px"
+  data-ad-client="ca-pub-7809934551469744"
+  data-ad-slot="7487240111"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+</div>
+<script>
+   var ads=document.getElementById("ads");
+   var tmp=ads.cloneNode(true);
+   ads.parentNode.removeChild(ads);
+   document.getElementsByClassName("entry-content")[0].appendChild(tmp);
+</script>
+
+<div class="follow-btn-b">
+読者登録、Twitterのフォローしてもらえると更新の励みになりますのでよろしくお願いします。
+<ul>
+<!--読者ボタン-->
+<li class="btn1">
+<a href="http://blog.hatena.ne.jp/mochikichi321/mochikichi.hatenablog.com/subscribe" target="_blank"><span class="btn1-icon"><br /></span>読者になる</a></li>
+<!--Twitterボタン-->
+<li class="btn2">
+<a href="https://twitter.com/intent/follow?screen_name=mochikichi419" target="_blank"><span class="btn2-icon"><br /></span>フォローする</a></li>
+</ul>
+</div></div>
+
+
+      
+    </div>
+    
+  <div class="comment-box">
+    
+    <ul class="comment">
+      <li class="read-more-comments" style="display: none;"><a>もっと読む</a></li>
+    </ul>
+    
+      <a class="leave-comment-title">コメントを書く</a>
+    
+  </div>
+
+  </footer>
+
+  </div>
+</article>
+
+      
+      
+    
+  
+
+  
+  <!-- rakuten_ad_target_end -->
+  <!-- google_ad_section_end -->
+  
+  
+  
+  <div class="pager pager-permalink permalink">
+    
+      
+      <span class="pager-prev">
+        <a href="http://mochikichi.hatenablog.com/entry/baby_trip_tokyo" rel="prev">
+          <span class="pager-arrow">&laquo; </span>
+          0歳児の赤ちゃんと初めての旅行体験記　授…
+        </a>
+      </span>
+    
+    
+      
+      <span class="pager-next">
+        <a href="http://mochikichi.hatenablog.com/entry/ikukyu_response" rel="next">
+          男性の育休取得に対する周囲の反応あるある…
+          <span class="pager-arrow"> &raquo;</span>
+        </a>
+      </span>
+    
+  </div>
+
+
+  
+
+
+
+        </div>
+      </div>
+
+      <aside id="box1">
+  <div id="box1-inner">
+  </div>
+</aside>
+
+    </div><!-- #wrapper -->
+
+    
+<aside id="box2">
+  
+  <div id="box2-inner">
+    
+      
+<div class="hatena-module hatena-module-entries-access-ranking"
+  data-count="5"
+  data-source="access"
+  data-enable_customize_format="0"
+
+  data-display_entry_category="0"
+  data-display_entry_image="1"
+  data-display_entry_image_size_width="100"
+  data-display_entry_image_size_height="100"
+  data-display_entry_body_length="0"
+  data-display_entry_date="0"
+  data-display_entry_title_length="20"
+  data-restrict_entry_title_length="0"
+  data-display_bookmark_count="1"
+
+>
+  <div class="hatena-module-title">
+    
+      人気記事
+    
+  </div>
+  <div class="hatena-module-body">
+    
+  </div>
+</div>
+
+    
+      
+<div class="hatena-module hatena-module-html">
+  <div class="hatena-module-body">
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.1&appId=1677800665796559&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-page" data-href="https://www.facebook.com/%E6%96%B0%E7%B1%B3%E3%83%91%E3%83%91%E3%81%AE%E8%82%B2%E5%85%90%E7%95%99%E5%AD%A6-311381936281795/?modal=admin_todo_tour" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/%E6%96%B0%E7%B1%B3%E3%83%91%E3%83%91%E3%81%AE%E8%82%B2%E5%85%90%E7%95%99%E5%AD%A6-311381936281795/?modal=admin_todo_tour" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/%E6%96%B0%E7%B1%B3%E3%83%91%E3%83%91%E3%81%AE%E8%82%B2%E5%85%90%E7%95%99%E5%AD%A6-311381936281795/?modal=admin_todo_tour">新米パパの育児留学</a></blockquote></div>
+  </div>
+</div>
+
+    
+      
+<div class="hatena-module hatena-module-html">
+    <div class="hatena-module-title">プロフィール</div>
+  <div class="hatena-module-body">
+    <p>
+<a href="http://mochikichi.hatenablog.com/">
+<img class="hatena-fotolife"  src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mochikichi321/20170319/20170319212629.jpg" /></a>
+</p>
+<p>『育児留学』とは、育児を通して異なる視点を得たり新しいことに挑戦して自己成長に繋げること。育児奮闘中の新米パパが育児を通して得た気づきや感じたこと、育休中に習得したプログラミングに関する話題を発信していきます。</p>
+<iframe src="https://blog.hatena.ne.jp/mochikichi321/mochikichi.hatenablog.com/subscribe/iframe" allowtransparency="true" frameborder="0" scrolling="no" width="150" height="28"></iframe>
+
+  </div>
+</div>
+
+    
+      
+<div class="hatena-module hatena-module-html">
+  <div class="hatena-module-body">
+    <a class="twitter-timeline" data-lang="ja" data-width="280" data-height="400" data-theme="light" href="https://twitter.com/mochikichi419">Twitter</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+</div>
+
+    
+      
+<div class="hatena-module hatena-module-html">
+    <div class="hatena-module-title">フォローする</div>
+  <div class="hatena-module-body">
+    <!-- -->
+<div class="follow-btn" >
+<a class="hatena" href="http://blog.hatena.ne.jp/mochikichi321/mochikichi.hatenablog.com/subscribe" target="_blank"><i class="blogicon-hatenablog lg"></i>         <span class="text-small">Hatena</span></a>
+<a class="twitter" href="https://twitter.com/intent/follow?screen_name=mochikichi419" target="_blank"><i class="blogicon-twitter lg"></i>         <span class="text-small">Twitter</span></a>
+<a class="feedly" href="http://feedly.com/i/subscription/feed/http://www.yukihy.com/feed" target="_blank"><i class="blogicon-rss lg"></i>         <span class="text-small">Feedly</span></a>
+<a class="newspicks"
+href= "https://newspicks.com/user/1158709">
+<span class="text-small">News Picks</span></a>
+<a class="qiita" href="http://qiita.com/mochikichi321" target="_blank">
+<span class="text-small">Qiita</span></a>
+</div>
+  </div>
+</div>
+
+    
+      
+<div class="hatena-module hatena-module-html">
+  <div class="hatena-module-body">
+    <a href="https://px.a8.net/svt/ejp?a8mat=2ZPFR2+LFMK2+3GVA+60H7L" target="_blank" rel="nofollow">
+<img border="0" width="160" height="600" alt="" src="https://www24.a8.net/svt/bgt?aid=180905726036&wid=001&eno=01&mid=s00000016183001010000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=2ZPFR2+LFMK2+3GVA+60H7L" alt="">
+  </div>
+</div>
+
+    
+      <div class="hatena-module hatena-module-recent-entries ">
+  <div class="hatena-module-title">
+    <a href="http://mochikichi.hatenablog.com/archive">
+      最新記事
+    </a>
+  </div>
+  <div class="hatena-module-body">
+    <ul class="recent-entries hatena-urllist urllist-with-thumbnails">
+  
+  
+    
+    <li class="urllist-item recent-entries-item">
+      <div class="urllist-item-inner recent-entries-item-inner">
+        
+                      <a class="urllist-image-link recent-entries-image-link" href="http://mochikichi.hatenablog.com/entry/2018/09/18/190000">
+  <img alt="未経験からエンジニアへ転職した私のキャリア構築プロセス(35週目)" src="https://cdn.image.st-hatena.com/image/square/5bf0dc5fadf1418926863bb473db08c268c6b716/backend=imagemagick;height=100;version=1;width=100/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fm%2Fmochikichi321%2F20171218%2F20171218132720.jpg" class="urllist-image recent-entries-image" title="未経験からエンジニアへ転職した私のキャリア構築プロセス(35週目)" width="100">
+</a>
+
+          <a href="http://mochikichi.hatenablog.com/entry/2018/09/18/190000" class="urllist-title-link recent-entries-title-link  urllist-title recent-entries-title">未経験からエンジニアへ転職した私のキャリア構築プロセス(35週目)</a>
+
+
+          
+          
+
+                </div>
+    </li>
+  
+    
+    <li class="urllist-item recent-entries-item">
+      <div class="urllist-item-inner recent-entries-item-inner">
+        
+                      <a class="urllist-image-link recent-entries-image-link" href="http://mochikichi.hatenablog.com/entry/2018/08/30/190000">
+  <img alt="未経験からエンジニアへ転職した私のキャリア構築プロセス(34週目)" src="https://cdn.image.st-hatena.com/image/square/5bf0dc5fadf1418926863bb473db08c268c6b716/backend=imagemagick;height=100;version=1;width=100/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fm%2Fmochikichi321%2F20171218%2F20171218132720.jpg" class="urllist-image recent-entries-image" title="未経験からエンジニアへ転職した私のキャリア構築プロセス(34週目)" width="100">
+</a>
+
+          <a href="http://mochikichi.hatenablog.com/entry/2018/08/30/190000" class="urllist-title-link recent-entries-title-link  urllist-title recent-entries-title">未経験からエンジニアへ転職した私のキャリア構築プロセス(34週目)</a>
+
+
+          
+          
+
+                </div>
+    </li>
+  
+    
+    <li class="urllist-item recent-entries-item">
+      <div class="urllist-item-inner recent-entries-item-inner">
+        
+                      <a class="urllist-image-link recent-entries-image-link" href="http://mochikichi.hatenablog.com/entry/remote_work">
+  <img alt="リモートワーク始めました。～会社がこどもを一緒に育ててくれている～" src="https://cdn.image.st-hatena.com/image/square/4c2dc817a6b1c66142a757f0e0f38f0295276de6/backend=imagemagick;height=100;version=1;width=100/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fm%2Fmochikichi321%2F20180825%2F20180825003203.png" class="urllist-image recent-entries-image" title="リモートワーク始めました。～会社がこどもを一緒に育ててくれている～" width="100">
+</a>
+
+          <a href="http://mochikichi.hatenablog.com/entry/remote_work" class="urllist-title-link recent-entries-title-link  urllist-title recent-entries-title">リモートワーク始めました。～会社がこどもを一緒に育ててくれている～</a>
+
+
+          
+          
+
+                </div>
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+    
+      <div class="hatena-module hatena-module-search-box">
+  <div class="hatena-module-title">
+    検索
+  </div>
+  <div class="hatena-module-body">
+    <form class="search-form" role="search" action="http://mochikichi.hatenablog.com/search" method="get">
+  <input type="text" name="q" class="search-module-input" value="" placeholder="記事を検索" required>
+  <input type="submit" value="検索" class="search-module-button" />
+</form>
+
+  </div>
+</div>
+
+    
+      
+
+<div class="hatena-module hatena-module-archive" data-archive-type="default" data-archive-url="http://mochikichi.hatenablog.com/archive">
+  <div class="hatena-module-title">
+    <a href="http://mochikichi.hatenablog.com/archive">月別アーカイブ</a>
+  </div>
+  <div class="hatena-module-body">
+  </div>
+</div>
+
+    
+      
+<div class="hatena-module hatena-module-html">
+    <div class="hatena-module-title">プライバシーポリシー</div>
+  <div class="hatena-module-body">
+    このサイトでは、サービスの配信、トラフィックの分析に Google の Cookie を使用しています。IP アドレスとユーザー エージェントはパフォーマンスやセキュリティの指標とともに Google と共有され、サービス品質の確保、使用統計情報の生成、アドレス不正使用の検出のために使用されます。詳細は　<a href="https://policies.google.com/technologies/cookies?hl=ja" target="_blank">こちら</a>
+  </div>
+</div>
+
+    
+    
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+
+
+
+        
+
+        
+  <div id="bottom-editarea">
+    <!-- CopyRight http://bulldra.http://bulldra.hatenablog.com -->
+<script src="https://www.google.com/jsapi"></script>
+<script src="http://bulldra.github.io/commons.js" charset="utf-8"></script>
+<script src="http://bulldra.github.io/breadcrumb.js" charset="utf-8"></script>
+  </div>
+
+
+      </div>
+    </div>
+    
+<footer id="footer" data-brand="hatenablog">
+  <div id="footer-inner">
+    
+      <div style="display:none !important" class="guest-footer js-guide-register test-blogs-register-guide" data-action="guide-register">
+  <div class="guest-footer-content">
+    <h3>はてなブログをはじめよう！</h3>
+    <p>mochikichi321さんは、はてなブログを使っています。あなたもはてなブログをはじめてみませんか？</p>
+    <div class="guest-footer-btn-container">
+      <div  class="guest-footer-btn">
+        <a class="btn btn-register" href="http://blog.hatena.ne.jp/register?via=200227" target="_blank">はてなブログをはじめる（無料）</a>
+      </div>
+      <div  class="guest-footer-btn">
+        <a href="http://hatenablog.com/guide" target="_blank">はてなブログとは</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <address class="footer-address">
+      <a href="http://mochikichi.hatenablog.com/">
+        <img src="https://cdn.image.st-hatena.com/image/square/87e4639a5d8c51a7463a4b5338db5e5f49878817/backend=imagemagick;height=128;version=1;width=128/https%3A%2F%2Fcdn.user.blog.st-hatena.com%2Fblog_custom_icon%2F130399145%2F1536714461621938" width="16" height="16" alt="新米パパの育児留学"/>
+        <span class="footer-address-name">新米パパの育児留学</span>
+      </a>
+    </address>
+    <p class="services">
+      Powered by <a href="http://hatenablog.com/">Hatena Blog</a>
+      |
+        <a href="https://blog.hatena.ne.jp/-/abuse_report?target_url=http%3A%2F%2Fmochikichi.hatenablog.com%2Fentry%2Frails_tutorial_like" class="report-abuse-link test-report-abuse-link" target="_blank">ブログを報告する</a>
+    </p>
+  </div>
+</footer>
+
+
+    
+  <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+
+
+    
+
+    
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=719729204785177&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    
+    
+
+<div class="quote-box">
+  <div class="tooltip-quote tooltip-quote-star">
+    <i class="blogicon-star" title="引用スターをつける"></i>
+  </div>
+  <div class="tooltip-quote tooltip-quote-stock">
+    <i class="blogicon-quote" title="引用をストック"></i>
+  </div>
+  <div class="tooltip-quote tooltip-quote-tweet js-tooltip-quote-tweet">
+    <a class="js-tweet-quote" target="_blank" data-track-name="quote-tweet" data-track-once><i class="blogicon-twitter" title="引用してツイートする"></i></a>
+  </div>
+</div>
+
+<div class="message-box" id="quote-star-message-box" style="display: none; position: absolute;">
+  スターをつけました
+</div>
+
+<div class="quote-stock-panel" id="quote-stock-message-box" style="position: absolute; z-index: 3000">
+  <div class="message-box" id="quote-stock-succeeded-message" style="display: none">
+    <p>引用をストックしました</p>
+    <button class="btn btn-primary" id="quote-stock-show-editor-button" data-track-name="curation-quote-edit-button">ストック一覧を見る</button>
+    <button class="btn quote-stock-close-message-button">閉じる</button>
+  </div>
+
+  <div class="message-box" id="quote-login-required-message" style="display: none">
+    <p>引用するにはまずログインしてください</p>
+    <button class="btn btn-primary" id="quote-login-button">ログイン</button>
+    <button class="btn quote-stock-close-message-button">閉じる</button>
+  </div>
+
+  <div class="error-box" id="quote-stock-failed-message" style="display: none">
+    <p>引用をストックできませんでした。再度お試しください</p>
+    <button class="btn quote-stock-close-message-button">閉じる</button>
+  </div>
+
+  <div class="error-box" id="unstockable-quote-message-box" style="display: none; position: absolute; z-index: 3000;">
+    <p>限定公開記事のため引用できません。</p>
+  </div>
+</div>
+
+<script type="x-underscore-template" id="js-requote-button-template">
+  <div class="requote-button js-requote-button">
+    <button class="requote-button-btn tipsy-top" title="引用する"><i class="blogicon-quote"></i></button>
+  </div>
+</script>
+
+
+
+    
+    <div id="hidden-subscribe-button" style="display: none;">
+      <div class="hatena-follow-button-box btn-subscribe js-hatena-follow-button-box"
+  
+  >
+
+  <a href="#" class="hatena-follow-button js-hatena-follow-button">
+    <span class="subscribing">
+      <span class="foreground">読者です</span>
+      <span class="background">読者をやめる</span>
+    </span>
+    <span class="unsubscribing" data-track-name="profile-widget-subscribe-button" data-track-once>
+      <span class="foreground">読者になる</span>
+      <span class="background">読者になる</span>
+    </span>
+  </a>
+  <div class="subscription-count-box js-subscription-count-box">
+    <i></i>
+    <u></u>
+    <span class="subscription-count js-subscription-count">
+    </span>
+  </div>
+</div>
+
+    </div>
+
+    
+  <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+
+<script src="https://apis.google.com/js/platform.js" async defer>
+  { lang: 'ja', "parsetags": "explicit" }
+</script>
+<script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+
+
+  <script type="text/javascript" src="https://cdn.blog.st-hatena.com/js/external/react-with-addons.min.js?version=15.4.1"></script>
+  <script type="text/javascript" src="https://cdn.blog.st-hatena.com/js/external/react-dom.min.js?version=15.4.1"></script>
+
+
+<script type="text/javascript" src="https://cdn.blog.st-hatena.com/js/external/jquery.min.js?version=1.12.3"></script>
+<script type="text/javascript" src="//cdn7.www.st-hatena.com/js/jquery/jquery-ui.1.10.0.custom.min.js"></script>
+<script type="text/javascript" src="https://cdn.blog.st-hatena.com/js/external/jquery.flot.js?version=0.8.3"></script>
+<script type="text/javascript" src="https://cdn.blog.st-hatena.com/js/external/jquery.flot.time.js?version=0.8.3"></script>
+
+
+
+
+
+<script type="text/javascript" src="https://cdn.blog.st-hatena.com/js/texts-ja.js?version=557ff16305966401b2167640dfbecb8f6a3749ab&amp;env=production"></script>
+<script id="hatenablog-js" data-env="production"
+  type="text/javascript" src="https://cdn.blog.st-hatena.com/js/hatenablog.js?version=6bee91f172f00b2f846004753dc8c9bf7b8def72&amp;env=production" crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript">Hatena.Diary.GlobalHeader.init()</script>
+
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+
+
+    
+
+    
+
+
+
+
+
+  </body>
+</html>
+
