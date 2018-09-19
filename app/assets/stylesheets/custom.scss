@@ -5,6 +5,17 @@
 
 body {
   padding-top: 60px;
+  
+  background-image: url(https://d3imh5q5dnm5ub.cloudfront.net/press_component/images/000/025/020/83eda5cd3ce8aa3dab41d1890fbac299dcaf08b6.jpg?1526488533);
+  
+　background-position: center center;
+
+　background-repeat: no-repeat;
+
+　background-attachment: fixed;
+
+　background-size: cover;
+
 }
 
 section {
@@ -22,6 +33,8 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+
+
 
 /* typography */
 
@@ -67,6 +80,7 @@ p {
   color: #fff;
   text-decoration: none;
 }
+
 
 /* footer */
 
