@@ -64,7 +64,7 @@ h3 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #fff;
+  color: #000;
 }
 
 p {
@@ -74,23 +74,30 @@ p {
 
 /* header */
 
+#menu{
+  color: #fff;
+    &:hover {
+    color: #000;
+  }
+}
+
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #bbb;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
    &:hover {
-    color: white;
+    color: #000;
     text-decoration: none;
   }
 }
 
 #logo:hover {
-  color: #fff;
+  color: #202020;
   text-decoration: none;
 }
 
