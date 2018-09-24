@@ -71,6 +71,7 @@ h3 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: #000;
 }
 
 /* header */
@@ -194,7 +195,7 @@ aside {
     float: left;
     padding: 0 10px;
     border-left: 1px solid $gray-lighter;
-    color: gray;
+    color: black;
     &:first-child {
       padding-left: 0;
       border: 0;
@@ -222,6 +223,7 @@ aside {
 
 .users.follow {
   padding: 0;
+  color: black;
 }
 /* forms */
 
@@ -267,6 +269,7 @@ input {
 /* Users index */
 
 .users {
+  
   list-style: none;
   margin: 0;
   li {
@@ -285,6 +288,7 @@ input {
     border-top: 1px solid #e8e8e8;
   }
   .user {
+    
     margin-top: 5em;
     padding-top: 0;
   }
@@ -297,7 +301,7 @@ input {
     }
   }
   .timestamp {
-    color: $gray-light;
+    color: black;
     display: block;
     margin-left: 60px;
   }
@@ -310,6 +314,7 @@ input {
 
 aside {
   textarea {
+    color: black;
     height: 100px;
     margin-bottom: 5px;
   }
