@@ -79,7 +79,7 @@ p {
 #menu{
   color: #fff;
     &:hover {
-    color: #deb887;
+    color: #DDDDDD;
   }
 }
 
@@ -99,7 +99,7 @@ p {
 }
 
 #logo:hover {
-  color: #deb887;
+  color: #DDDDDD;
   text-decoration: none;
 }
 
@@ -114,15 +114,16 @@ footer {
 }
 
 footer a {
-  color: #fff;
+  color: #000;
 }
 
 footer a:hover {
-  color: #222;
+  color: #EEEEEE;
 }
 
 footer small {
   float: left;
+  color: #000;
 }
 
 footer ul {
