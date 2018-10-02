@@ -1,4 +1,4 @@
-<li id="micropost-<%= micropost.id %>">
+<li id="micropost-<%= micropost.id %>" data-micropost-id="<%= micropost.id %>">
   <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
   <span class="content">
@@ -12,5 +12,5 @@
                                        data: { confirm: "本当に削除してもよろしいですか？" } %>
     <% end %>
   </span>
-    <%= render partial: 'likes/like', locals: { micropost: micropost, likes: @likes } %>
+    <%= render "likes/like", micropost: micropost %>
 </li>
