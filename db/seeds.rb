@@ -3,6 +3,7 @@ User.create!(name:  "管理者（菅沼大樹）",
              email: "example@railstutorial.org",
              password:              "foobar",
              password_confirmation: "foobar",
+             affiliation: "本社",
              admin:     true,
              activated: true,
              activated_at: Time.zone.now)
@@ -15,6 +16,7 @@ User.create!(name:  "管理者（菅沼大樹）",
                email: email,
                password:              password,
                password_confirmation: password,
+               affiliation: "本社",
                activated: true,
                activated_at: Time.zone.now)
 end
