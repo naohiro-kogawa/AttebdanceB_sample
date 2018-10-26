@@ -3,8 +3,16 @@
 
 <%= will_paginate %>
 
+<%if current_user.try(:admin?)%>
+<ul class="users">
+  <%= render @users %>
+</ul>
+<% else %>
 <ul class="users">
   <%= render current_user %>
 </ul>
+ 
+<%end%>
+
 
 <%= will_paginate %>
