@@ -18,6 +18,7 @@ class UsersController < ApplicationController
       @first_day = Date.new(Date.today.year, Date.today.month)
      end
      @last_day = @first_day.end_of_month
+     redirect_to(root_url) unless current_user.admin?
    end
 
   def new
