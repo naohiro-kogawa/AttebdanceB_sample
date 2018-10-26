@@ -20,15 +20,17 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.save
-      @user.send_activation_email
-      flash[:info] = "アカウント認証のためのメールを送りました！メールをご確認いただき、改めて
-      サイトにアクセスしていただくと登録が完了いたします。"
-      redirect_to root_url
+    if @user.save # => Validation
+      # Sucess
+      log_in @user
+      flash[:success] = "新規登録が完了しました"
+      redirect_to @user
+      # GET "/users/#{@user.id}" => show
     else
-      render 'new'
+      # Failure
+      render 'new'      
     end
-  end
+ end
 
   def edit
     @user = User.find(params[:id])
