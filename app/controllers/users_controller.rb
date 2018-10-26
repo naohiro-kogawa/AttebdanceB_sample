@@ -12,7 +12,7 @@ class UsersController < ApplicationController
      @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
     @likes = Like.where(micropost_id: params[:micropost_id])
-  end
+   end
 
   def new
     @user = User.new
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
       # Failure
       render 'new'      
     end
- end
+  end
 
   def edit
     @user = User.find(params[:id])
@@ -69,7 +69,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+                                   :password_confirmation,:affiliation)
     end
 
     def correct_user
