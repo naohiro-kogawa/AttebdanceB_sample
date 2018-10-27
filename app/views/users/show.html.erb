@@ -31,6 +31,7 @@
     <th>時</th>
     <th>分</th>
     <th>出社ボタン</th>
+    <th>退社ボタン</th>
     <th>退社(時)</th>
     <th>退社(分)</th>
     <th>在社時間</th>
@@ -40,13 +41,14 @@
     <tr>
       <td><%= @first_day.month %>月<%= date.day %>日</td>
       <td><%= %w(日 月 火 水 木 金 土 日)[date.wday] %></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>出社時</td>
+      <td>出社分</td>
+      <td>出社ボタン</td>
+      <td>退社ボタン</td>
+      <td>退社(時)</td>
+      <td>退社(分)</td>
+      <td>在社時間</td>
+      <td>備考</td>
       
     </tr>
 <%end%>
