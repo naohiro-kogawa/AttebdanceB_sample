@@ -1,0 +1,27 @@
+<table class="table-striped table-bordered">
+  　<tr>
+    <th class="col-xs-1 col-ms-1 col-md-1 col-lg-1">日付</th>
+    <th class="col-xs-1 col-ms-1 col-md-1 col-lg-1">曜日</th>
+    <th>時</th>
+    <th>分</th>
+    <th>出社ボタン</th>
+    <th>退社(時)</th>
+    <th>退社(分)</th>
+    <th>在社時間</th>
+    <th>備考</th>
+  </tr>
+<%(@first_day..@last_day).each do |date|%>
+    <tr>
+      <td><%= @first_day.month %>月<%= date.day %>日</td>
+      <td><%= %w(日 月 火 水 木 金 土 日)[date.wday] %></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+<%end%>
+</table>
