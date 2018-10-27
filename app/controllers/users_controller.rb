@@ -10,14 +10,17 @@ class UsersController < ApplicationController
    
    def show
      @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
-    @likes = Like.where(micropost_id: params[:micropost_id])
+     @work = @user.works 
+    # @microposts = @user.microposts.paginate(page: params[:page])
+    # @likes = Like.where(micropost_id: params[:micropost_id])
+     
      if !params[:first_day].nil?
       @first_day = Date.parse(params[:first_day])
-    else
+     else
       @first_day = Date.new(Date.today.year, Date.today.month)
      end
      @last_day = @first_day.end_of_month
+     
      redirect_to(root_url) unless current_user.admin?
    end
 
