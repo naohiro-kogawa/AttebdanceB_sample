@@ -37,12 +37,18 @@
     <th>在社時間</th>
     <th>備考</th>
   </tr>
-<%(@first_day..@last_day).each do |date|%>
+<%(@first_day..@last_day).each do |date| %>
     <tr>
       <td><%= @first_day.month %>月<%= date.day %>日</td>
       <td><%= %w(日 月 火 水 木 金 土 日)[date.wday] %></td>
-      <td>出社時</td>
-      <td>出社分</td>
+      <td>
+        <% if @works.attendance_time.day == date.day %>
+        <%= @works.attendance_time.hour %>
+        <% end %>
+        </td>
+      <td><% if @works.attendance_time.day == date.day %>
+        <%= @works.attendance_time.min %>
+        <% end %></td>
       <td>出社ボタン</td>
       <td>退社ボタン</td>
       <td>退社(時)</td>
