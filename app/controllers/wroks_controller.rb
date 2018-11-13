@@ -1,9 +1,9 @@
 class WroksController < ApplicationController
-    def create
-    @micropost = current_user.microposts.build(micropost_params)
-    if @micropost.save
-      flash[:success] = "投稿が完了しました。"
+  def create
+    @work= current_user.works.build(work_params)
+    if @work.save
+      flash[:success] = "出勤しました"
       redirect_to root_url
-  end
+    end
   end
 end
