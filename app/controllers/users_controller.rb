@@ -12,10 +12,10 @@ class UsersController < ApplicationController
      
 
      @user = User.find(params[:id])
-     @works = @user.works.find_by(params[:id])
+     @works = @user.works
     # @microposts = @user.microposts.paginate(page: params[:page])
     # @likes = Like.where(micropost_id: params[:micropost_id])
-     
+     byebug
      if !params[:first_day].nil?
       @first_day = Date.parse(params[:first_day])
      else
