@@ -36,3 +36,17 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+
+
+
+# 追加したところ
+days = (Date.new(2018,11).all_month)
+user = User.find(1)
+start_time = Time.new(2018, 5, 30, 9, 00, 00)
+end_time = Time.new(2018, 5, 30, 17, 15, 00)
+    days.each do |day|
+       Work.create!(day: day,
+             attendance_time: start_time,
+             leaving_time: end_time,
+             user_id: user.id)
+    end

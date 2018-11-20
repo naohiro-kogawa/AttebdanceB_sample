@@ -37,18 +37,36 @@
     <th>在社時間</th>
     <th>備考</th>
   </tr>
-<%(@first_day..@last_day).each do |date| %>
+  
+<%#(@first_day..@last_day).each do |date| %>
+    <!--<tr>-->
+    <!--  <td><%#= @first_day.month %>月<%#= date.day %>日</td>-->
+    <!--  <td><%#= %w(日 月 火 水 木 金 土 日)[date.wday] %></td>-->
+    <!--  <td><%#= @works.attendance_time.hour if @works == date %></td>-->
+    <!--  <td><%#= @works.attendance_time.min  if @works == date %></td>-->
+    <!--  <td>出社ボタン</td>-->
+    <!--  <td>退社ボタン</td>-->
+    <!--  <td><%#= @works.leaving_time.hour if @works == date %></td>-->
+    <!--  <td><%#= @works.leaving_time.min if @works == date %></td>-->
+    <!--  <td>在社時間</td>-->
+    <!--  <td><%#= @works.remarks if @works == date %></td>-->
+    <!--</tr>-->
+<%#end%>
+
+<!--以下のように修正しました。これだと勤怠の１ヶ月分のレコードをビューを表示する前に作成する必要があります。
+なので、１ヶ月分の勤怠を表示する前にshowアクションで表示したい１ヶ月分のレコードを作成します！-->
+<% @works.each do |work| %>
     <tr>
-      <td><%= @first_day.month %>月<%= date.day %>日</td>
-      <td><%= %w(日 月 火 水 木 金 土 日)[date.wday] %></td>
-      <td><%= @works.attendance_time.hour if @works == date %></td>
-      <td><%= @works.attendance_time.min  if @works == date %></td>
+      <td><%= work.day.month %>月<%= work.day.day %>日</td>
+      <td><%= %w(日 月 火 水 木 金 土 日)[work.day.wday] %></td>
+      <td><%= work.attendance_time.hour if work.attendance_time %></td>
+      <td><%= work.attendance_time.min if work.attendance_time %></td>
       <td>出社ボタン</td>
       <td>退社ボタン</td>
-      <td><%= @works.leaving_time.hour if @works == date %></td>
-      <td><%= @works.leaving_time.min if @works == date %></td>
+      <td><%= work.leaving_time.hour if work.leaving_time %></td>
+      <td><%= work.leaving_time.min if work.leaving_time %></td>
       <td>在社時間</td>
-      <td><%= @works.remarks if @works == date %></td>
+      <td><%= work.remarks %></td>
     </tr>
 <%end%>
 </table>
