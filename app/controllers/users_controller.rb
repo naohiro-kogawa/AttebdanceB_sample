@@ -27,8 +27,7 @@ class UsersController < ApplicationController
   # 以下でビューを表示する前に、１ヶ月分の勤怠レコードが存在しなかったら、１ヶ月分の勤怠レコードを作成します。
      unless @user.works.find_by(day: @first_day)
        @first_day.all_month.each do |day|
-         Work.create!(day: day,
-               user_id: @user.id)
+         Work.create!(day: day,user_id: @user.id)
        end
      end
      

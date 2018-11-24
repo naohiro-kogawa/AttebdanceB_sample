@@ -39,7 +39,7 @@ followers.each { |follower| follower.follow(user) }
 
 
 
-# 追加したところ
+
 days = (Date.new(2018,11).all_month)
 user = User.find(1)
 start_time = Time.new(2018, 5, 30, 9, 00, 00)
