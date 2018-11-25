@@ -1,7 +1,6 @@
 class WorksController < ApplicationController
  
   def create
-   @user = User.find(params[:id])
    @work = Work.create(user_id: @user.id, attendance_time: Time.now, day: Date.today)
                 flash[:success] = "今日も一日頑張りましょう！"
   end
