@@ -1,13 +1,15 @@
 class WorksController < ApplicationController
+ 
   def create
-    @work= current_user.works.build(work_params)
-    if @work.save
-      flash[:success] = "出勤しました"
-      redirect_to root_url
-    end
+     @user = User.find(params[:id])
+   @work = Work.create(user_id: @user.id, 
+                        start_time: Time.new(Time.now.year,Time.now.month,Time.now.day,Time.new.hour,Time.now.min,00),
+                        day: Time.now)
+                flash[:success] = "今日も一日頑張りましょう！"
   end
 def show
      @user = User.find(params[:id])
+     
     # @works = @user.works  
      if !params[:first_day].nil?
       @first_day = Date.parse(params[:first_day])
@@ -24,4 +26,5 @@ def show
        end
      end
 end
+
 end
