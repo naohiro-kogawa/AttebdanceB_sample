@@ -8,19 +8,12 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+  post   'update'  => 'works#update' #出勤ボタンが反応した際のルートが調べると　update_path	POST	/update(.:format)	works#update　ルートの書き方が問題なのか、ボタン側の書き方が悪いのかわかりません。
   resources :works
   resources :users do
-   # member do
-    #  get :following, :followers
-   # end
+   
   end
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
-  #resources :microposts,         only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
- # resources :likes, only: [:create, :destroy]
-  #like機能拡張用に指定
- # resources :microposts do
- #   resources :likes, only: [:create, :destroy]
- # end
 end

@@ -1,10 +1,5 @@
 class WorksController < ApplicationController
  
-  def create
-   @work = Work.create(user_id: @user.id, attendance_time: Time.now, day: Date.today)
-                flash[:success] = "今日も一日頑張りましょう！"
-  end
-  
   def show
      @user = User.find(params[:id])
      if !params[:first_day].nil?
@@ -21,5 +16,17 @@ class WorksController < ApplicationController
          Work.create!(day: day,user_id: @user.id)#createの後ろの！は通常より強い（破壊的）メソッド
        end
      end
+  end
+  
+  def update　# Workモデルにidと日付に一致するデータがある場合はupdate、そうでない場合はcreateするようになっています
+   if Work.find_by(user_id: @user.id, day: Date.today)
+    
+    Work.find_by(user_id: @user.id, day: Date.today ).update(attendance_time: Time.new)
+    
+   else
+    @work = Work.create(user_id: @user.id, attendance_time: Time.new,day: Time.now)
+                flash[:success] = "今日も一日頑張りましょう！"
+   end
+   redirect_to work_url
   end
 end
