@@ -19,12 +19,12 @@ class WorksController < ApplicationController
   end
   
   def update　# Workモデルにidと日付に一致するデータがある場合はupdate、そうでない場合はcreateするようになっています
-   if Work.find_by(user_id: @user.id, day: Date.today)
+   if Work.find_by(user_id: current_user, day: Date.today)
     
-    Work.find_by(user_id: @user.id, day: Date.today ).update(attendance_time: Time.new)
+    Work.find_by(user_id: current_user, day: Date.today ).update(attendance_time: Time.new)
     
    else
-    @work = Work.create(user_id: @user.id, attendance_time: Time.new,day: Time.now)
+    @work = Work.create(user_id: current_user, attendance_time: Time.new,day: Time.now)
                 flash[:success] = "今日も一日頑張りましょう！"
    end
    redirect_to work_url

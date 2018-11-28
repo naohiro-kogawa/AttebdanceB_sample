@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-  post   'update'  => 'works#update' #出勤ボタンが反応した際のルートが調べると　update_path	POST	/update(.:format)	works#update　ルートの書き方が問題なのか、ボタン側の書き方が悪いのかわかりません。
+  put   'update'  => 'works#update' #出勤ボタンが反応した際のルートが調べると　update_path	POST	/update(.:format)	works#update　ルートの書き方が問題なのか、ボタン側の書き方が悪いのかわかりません。
   resources :works
   resources :users do
    
