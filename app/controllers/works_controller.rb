@@ -18,14 +18,14 @@ class WorksController < ApplicationController
      end
   end
   
-  def update　# Workモデルにidと日付に一致するデータがある場合はupdate、そうでない場合はcreateするようになっています
-   if Work.find_by(user_id: current_user, day: Date.today)
-    
-    Work.find_by(user_id: current_user, day: Date.today ).update(attendance_time: Time.new)
-    
-   else
-    @work = Work.create(user_id: current_user, attendance_time: Time.new,day: Time.now)
+  def update# Workモデルにidと日付に一致するデータがある場合はupdate、そうでない場合はcreateするようになっています
+   if params[:出社]
+    Work.find_by(day: Date.today ).update(attendance_time: Time.new)
                 flash[:success] = "今日も一日頑張りましょう！"
+    
+   elsif params[:退社]
+    Work.find_by(day: Date.today ).update(leaving_time: Time.new)
+                flash[:success] = "今日も一日お疲れ様です！"
    end
    redirect_to work_url
   end
