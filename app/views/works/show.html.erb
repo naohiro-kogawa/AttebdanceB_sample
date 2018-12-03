@@ -46,8 +46,7 @@
       <td><%= work.attendance_time.min if work.attendance_time %></td>
       <td>
                 <% if work.day == Date.today && work.attendance_time.nil? %> 
-                <%= button_to "出社", { :action => "update" }, class: "btn btn-default btn-lg btn-block", :method => :patch %>
-                <%#= button_to "出社", {:action => "update"}, {:method => :patch}, { class: "btn btn-default btn-lg btn-block" } %>　<!-- actionをupdateに変更しました　!-->
+                <%= button_to "出社", { :action => "update" }, class: "btn btn-default btn-lg btn-block", :method => :patch %>　<!-- actionをupdateに変更しました　!-->
                 <% end %>
       </td>
       <td>      <% if work.day == Date.today && work.attendance_time && work.leaving_time.nil? %>

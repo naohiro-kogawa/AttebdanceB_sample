@@ -18,9 +18,14 @@ class WorksController < ApplicationController
      end
   end
   
-  def update #(#の左のスペースが全角になっていたので、エラーが出ていました。スペースは半角にしましょう。) Workモデルにidと日付に一致するデータがある場合はupdate、そうでない場合はcreateするようになっています
-   if Work.find_by(user_id: current_user.id, day: Date.today ).update(attendance_time: Time.new)
-     flash[:success] = "今日も一日頑張りましょう！"
+  def update　# Workモデルにidと日付に一致するデータがある場合はupdate、そうでない場合はcreateするようになっています
+   if Work.find_by(user_id: current_user, day: Date.today)
+    
+    Work.find_by(user_id: current_user, day: Date.today ).update(attendance_time: Time.new)
+    
+   else
+    @work = Work.create(user_id: current_user, attendance_time: Time.new,day: Time.now)
+                flash[:success] = "今日も一日頑張りましょう！"
    end
    redirect_to work_url
    # if Work.find_by(user_id: @user.id, day: Date.today)
