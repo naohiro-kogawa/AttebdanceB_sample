@@ -1,7 +1,7 @@
 class WorksController < ApplicationController
  
   def show
-     @user = User.find(params[:id])
+     @user = current_user #ログインしているので、current_userを使用しました！
      if !params[:first_day].nil?
        @first_day = Date.parse(params[:first_day])
      else
@@ -18,15 +18,15 @@ class WorksController < ApplicationController
      end
   end
   
-  def update　# Workモデルにidと日付に一致するデータがある場合はupdate、そうでない場合はcreateするようになっています
-   if Work.find_by(user_id: current_user, day: Date.today)
-    
-    Work.find_by(user_id: current_user, day: Date.today ).update(attendance_time: Time.new)
-    
-   else
-    @work = Work.create(user_id: current_user, attendance_time: Time.new,day: Time.now)
-                flash[:success] = "今日も一日頑張りましょう！"
+  def update # Workモデルにidと日付に一致するデータがある場合はupdate、そうでない場合はcreateするようになっています
+   work = Work.find(params[:id]) #workのidがパラメーターで渡って来ていたので、workの検索をidで絞りました。
+   if params[:button_type] == "start" && work.attendance_time.nil? #paramsはどういう形でコントローラーに渡ってくるかを確認するのがいいと思います。debuggerを仕込むか、raiseでパラメーターを確認しましょう！
+    work.update(attendance_time: Time.zone.now) #Time.newをTime.zone.newにしました。これで日本時間になります。
+    flash[:success] = "今日も一日頑張りましょう！"
+   elsif params[:button_type] == "end" && work.leaving_time.nil?
+    work.update(leaving_time: Time.zone.now)
+    flash[:success] = "お疲れ様でした！"
    end
-   redirect_to work_url
+   redirect_to work_url(work)
   end
 end
