@@ -55,7 +55,7 @@
       </td>
       <td><%= work.leaving_time.hour if work.leaving_time %></td>
       <td><%= work.leaving_time.min if work.leaving_time %></td>
-      <td>在社時間</td>
+      <td><%=work.leaving_time && work.attendance_time && sprintf("%.2f", BigDecimal(((work.leaving_time - work.attendance_time)/60/60).to_s).to_f ) %></td>
       <td><%= work.remarks %></td>
     </tr>
 <%end%>
