@@ -1,7 +1,7 @@
 class WorksController < ApplicationController
  
   def show
-     @user = current_user #ログインしているので、current_userを使用しました！
+     @user = current_user 
      if !params[:first_day].nil?
        @first_day = Date.parse(params[:first_day])
      else
