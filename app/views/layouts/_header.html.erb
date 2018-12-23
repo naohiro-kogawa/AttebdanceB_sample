@@ -5,7 +5,9 @@
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
           <li><%= link_to "勤怠入力画面", work_path(current_user,Date.today) %></li>
+          <%if current_user.try(:admin?)%>
           <li><%= link_to "ユーザー覧", users_path ,id:"menu" %></li>
+          <%end%>
            <li><%= link_to "基本情報の修正", edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
@@ -20,3 +22,4 @@
     </nav>
   </div>
 </header>
+

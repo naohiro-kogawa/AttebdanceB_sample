@@ -29,8 +29,8 @@
     <th class="col-xs-1 col-ms-1 col-md-1 col-lg-1">曜日</th>
     <th>時</th>
     <th>分</th>
-    <th>出社ボタン</th>
-    <th>退社ボタン</th>
+    <th>　　　　　</th>
+    <th>　　　　　</th>
     <th>退社(時)</th>
     <th>退社(分)</th>
     <th>在社時間</th>
@@ -48,8 +48,8 @@
                 <% if work.day == Date.today && work.attendance_time.nil? %> 
                 <%= button_to "出社", work_path(work, button_type: "start"), class: "btn btn-default btn-lg btn-block", :method => :patch %>
                 <% end %>
-      </td>
-      <td>      <% if work.day == Date.today && work.attendance_time && work.leaving_time.nil? %>
+      
+                <% if work.day == Date.today && work.attendance_time && work.leaving_time.nil? %>
                 <%= button_to "退社", work_path(work, button_type: "end"), class: "btn btn-default btn-lg btn-block", :method => :patch %>
                 <% end %>
       </td>
