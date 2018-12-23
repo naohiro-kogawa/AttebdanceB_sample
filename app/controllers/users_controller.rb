@@ -7,7 +7,6 @@ class UsersController < ApplicationController
  def index
     @users = User.paginate(page: params[:page])
     if current_user.admin?
-     
    else
      redirect_to(root_url) 
      flash[:warning] = "ほかのユーザにはアクセスできません"
@@ -15,8 +14,6 @@ class UsersController < ApplicationController
  end
    
    def show
-     
-
      @user = User.find(params[:id])
      if !params[:first_day].nil?
       @first_day = Date.parse(params[:first_day])
@@ -30,8 +27,6 @@ class UsersController < ApplicationController
          Work.create!(day: day,user_id: @user.id)
        end
      end
-     
-     
      if current_user.admin?
    else
      redirect_to(root_url) 

@@ -1,1 +1,77 @@
  勤怠の編集ページ 
+ <% provide(:title, @user.name) %>
+　<div class="row">
+  <div class="col-lg-n">
+    
+    <%= form_for(@user, url: edit_work_path, method: :post) do |f| %>
+    <%= hidden_field_tag :id, @user.id %>
+    <%= hidden_field_tag :first_day, @first_day %>
+
+<table class="table table-bordered">
+  <tr>
+    <td class="col-xs-3 col-ms-3 col-md-4 col-lg-4"><%= link_to "◀︎",work_url(params: { id: @user.id, first_day: @first_day.prev_month }), style:"color:white", class: 'btn btn-default btn-primary' %>
+        <%= @first_day.strftime("%Y年%m月") %>　時間管理表　
+        <%= link_to "▶︎",work_url(params: { id: @user.id, first_day: @first_day.next_month }), style:"color:white", class: 'btn btn-default btn-primary' %>
+    </td>
+    <td class="col-xs-3 col-ms-3 col-md-4 col-lg-4">指定勤務時間</td>
+    <td>基本時間</td>
+    <td class="col-xs-2 col-ms-2 col-md-2 col-lg-2">初日　<%= @first_day.beginning_of_month.strftime("%m月%d日") %></td>
+  </tr>
+  
+</table>
+  <table class="table table-bordered">
+  <tr>
+    <td class="col-xs-3 col-ms-3 col-md-4 col-lg-4"><%= @user.affiliation %></td>
+    <td class="col-xs-3 col-ms-3 col-md-4 col-lg-4"><%= @user.name %></td>
+    <td>コード</td>
+    <td>出社日数</td>
+    <td class="col-xs-2 col-ms-2 col-md-2 col-lg-2">締め　<%= @last_day.strftime("%m月%d日") %></td>
+  </tr>
+</table>
+
+<table class="table-striped table-bordered">
+  <tr>
+    <th class="col-xs-1 col-ms-1 col-md-1 col-lg-1">日付</th>
+    <th class="col-xs-1 col-ms-1 col-md-1 col-lg-1">曜日</th>
+    <th>時</th>
+    <th>分</th>
+    <th>　　　　　</th>
+    <th>　　　　　</th>
+    <th>退社(時)</th>
+    <th>退社(分)</th>
+    <th>在社時間</th>
+    <th>備考</th>
+  </tr>
+  
+<% @works.each do |work| %>
+
+    <tr>
+      <td><%= work.day.month %>月<%= work.day.day %>日</td>
+      <td><%= %w(日 月 火 水 木 金 土 日)[work.day.wday] %></td>
+      <td><%= work.attendance_time.hour if work.attendance_time %></td>
+      <td><%= work.attendance_time.min if work.attendance_time %></td>
+      <td>
+                <% if work.day == Date.today && work.attendance_time.nil? %> 
+                <%= button_to "出社", work_path(work, button_type: "start"), class: "btn btn-default btn-lg btn-block", :method => :patch %>
+                <% end %>
+      
+                <% if work.day == Date.today && work.attendance_time && work.leaving_time.nil? %>
+                <%= button_to "退社", work_path(work, button_type: "end"), class: "btn btn-default btn-lg btn-block", :method => :patch %>
+                <% end %>
+      </td>
+      <td><%= work.leaving_time.hour if work.leaving_time %></td>
+      <td><%= work.leaving_time.min if work.leaving_time %></td>
+      <td><%= day_work_time(work) %></td>
+      <td><%= work.remarks %></td>
+    </tr>
+<%end%>
+</table>
+<%= month_work_time(@works) %>
+<center>
+      <%= f.submit "編集内容で更新", style:"width:300px", class: "btn btn-primary" %>
+  
+      <%= link_to "キャンセル", user_url(@user, params:{first_day: @first_day }),\
+      style:"width:300px", class: "btn btncancel btn-default" %>
+    </center>
+　</div>
+　</div>

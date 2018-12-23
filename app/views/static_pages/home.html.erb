@@ -1,10 +1,12 @@
 <% if logged_in? %>
   <div class="row">
     <aside class="col-md-4">
+      
     </aside>
     <div class="col-md-8">
-  <%= link_to "勤怠入力はこちらから", work_path(current_user,Date.today) %>
+ 
     </div>
+    <h1><%= link_to "勤怠入力はこちらから", work_path(current_user,Date.today) %></h1>
   </div>
 <% else %>
   <div class="center jumbotron">
