@@ -6,6 +6,12 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
  def index
     @users = User.paginate(page: params[:page])
+    if current_user.admin?
+     
+   else
+     redirect_to(root_url) 
+     flash[:warning] = "ほかのユーザにはアクセスできません"
+    end
  end
    
    def show
@@ -25,22 +31,10 @@ class UsersController < ApplicationController
        end
      end
      
-     if !params[:first_day].nil?
-       @first_day = Date.parse(params[:first_day])
-     else
-       @first_day = Date.new(Date.today.year, Date.today.month)
-     end
-      @last_day = @first_day.end_of_month
-     @works = @user.works.where(day: @first_day..@last_day)
-     unless @user.works.find_by(day: @first_day) #unless=条件が偽だった時の処理
-       @first_day.all_month.each do |day|
-         Work.create!(day: day,user_id: @user.id)
-       end
-     end
-     if current_user.admin?
      
+     if current_user.admin?
    else
-     redirect_to(users_path) 
+     redirect_to(root_url) 
      flash[:warning] = "ほかのユーザにはアクセスできません"
      end
    end
