@@ -91,6 +91,11 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation,:affiliation)
     end
+    
+    private
+    def works_params
+      params.permit(works: [:attendance_time, :leaving_time, :remarks])[:works]
+    end
 
     def correct_user
       @user = User.find(params[:id])

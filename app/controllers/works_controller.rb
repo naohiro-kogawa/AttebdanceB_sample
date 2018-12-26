@@ -48,5 +48,14 @@ class WorksController < ApplicationController
          end
        end
   end
+  
+   private
+    #def works_params
+     # params.permit(works: [:attendance_time, :leaving_time, :remarks])[:works]
+    #end
+    private
+    def works_params
+      params.permit(works: [:attendance_time, :leaving_time, :remarks])[:works]
+    end
 
 end

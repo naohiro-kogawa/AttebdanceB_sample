@@ -47,8 +47,11 @@
           <tr>
             <td><%= work.day.month %>月<%= work.day.day %>日</td>
             <td><%= %w(日 月 火 水 木 金 土 日)[work.day.wday] %></td>
-            <td><%= work.attendance_time.hour if work.attendance_time %></td>
-            <td><%= work.attendance_time.min if work.attendance_time %></td>
+            <td>
+                        <%= fields_for "works[]", work do |fi| %>
+                            <%= fi.time_field :attendance_time, {class: 'form-control'}  %>
+                        <% end %>
+                    </td>
             <td>
                       <% if work.day == Date.today && work.attendance_time.nil? %> 
                         <%= button_to "出社", work_path(work, button_type: "start"), class: "btn btn-default btn-lg btn-block", :method => :patch %>
@@ -71,6 +74,6 @@
   
         <%= link_to "キャンセル", user_url(@user, params:{first_day: @first_day }), style: "width:300px", class: "btn btncancel btn-default" %>
       </center>
-      <% end %> <!--form_for--><!--左のendがなかったですね！ブロックの処理とか、if文などのendは構造が複雑になると忘れがちなので、綺麗にHTMLタグをネストするとエラーの内容が見えてきますね！-->
+      <% end %> 
 　  </div>
 　</div>

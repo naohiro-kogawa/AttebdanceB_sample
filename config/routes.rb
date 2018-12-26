@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   put    'update'  => 'works#update' 
+  post   '/works/:id/edit' , to: 'works#edit'
   resources :works
   resources :users do
    
