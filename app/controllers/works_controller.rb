@@ -32,6 +32,7 @@ class WorksController < ApplicationController
   end
   
   def edit
+    
     @user = current_user
     if !params[:first_day].nil?
          @first_day = Date.parse(params[:first_day])
@@ -50,10 +51,6 @@ class WorksController < ApplicationController
   end
   
    private
-    #def works_params
-     # params.permit(works: [:attendance_time, :leaving_time, :remarks])[:works]
-    #end
-    private
     def works_params
       params.permit(works: [:attendance_time, :leaving_time, :remarks])[:works]
     end
