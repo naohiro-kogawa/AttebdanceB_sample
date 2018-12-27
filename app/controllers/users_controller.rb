@@ -91,6 +91,7 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation,:affiliation)
     end
+    
 
     def correct_user
       @user = User.find(params[:id])
