@@ -2,7 +2,7 @@
  <% provide(:title, @user.name) %>
 　<div class="row">
     <div class="col-lg-n">
-    
+      <!--以下のform_forはeditアクションに飛んでいるので、updateアクションに飛ぶように修正しましょう！editは基本的には、ページの表示だけに使うようにしましょう！-->
       <%= form_for(@user, url: edit_work_path, method: :post) do |f| %>
       <%= hidden_field_tag :id, @user.id %>
       <%= hidden_field_tag :first_day, @first_day %>
