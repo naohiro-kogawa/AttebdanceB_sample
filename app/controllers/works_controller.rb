@@ -18,7 +18,12 @@ class WorksController < ApplicationController
      end
   end
   
+  def create
+    #updateの処理をこちらのcreateに移動して、処理をわかりやすくしましょう！そのままコピペでいいと思いますが、ルーティングファイルとビューファイルの名前の修正が必要になると思います。
+  end
+  
   def update 
+    # ここにeditページで更新する処理を書きます。なのでform_forはこのupdateアクションに飛ぶようにビューを修正してみてください！とりあえず、処理の内容は後回しでいいと思います！
    work = Work.find(params[:id]) #workのidがパラメーターで渡って来ていたので、workの検索をidで絞りました。
    if params[:button_type] == "start" && work.attendance_time.nil? #paramsはどういう形でコントローラーに渡ってくるかを確認するのがいいと思います。debuggerを仕込むか、raiseでパラメーターを確認しましょう！
     work.update(attendance_time: Time.zone.now) 
@@ -32,7 +37,8 @@ class WorksController < ApplicationController
   end
   
   def edit
-    
+    # editにはedit(勤怠編集ページ)ページを表示するだけの処理をコーディングしてみてください！showページで勤怠情報は作成されているので、シンプルなコーディングになると思います。ですが、処理内容は後回しにして、適正なアクションに適正な処理がコーディングされていることを優先してみてください。
+    # 処理の内容はその後に行いましょう！
     @user = current_user
     if !params[:first_day].nil?
          @first_day = Date.parse(params[:first_day])
