@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   put    'update'  => 'works#update' 
   post   '/works/:id/edit' , to: 'works#edit'
   resources :works
+  # resources :worksがあるので修正はいらなかったですね。そのままコントローラーのアクションcreateの追加とビューの名前変更で行けると思います！
   resources :users do
    
   end
