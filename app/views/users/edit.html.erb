@@ -1,5 +1,5 @@
-<% provide(:title, "プロフィール編集") %>
-<h1>プロフィール編集ページ</h1>
+<% provide(:title, "アカウント編集") %>
+<h1>アカウント編集ページ</h1>
 <section class="user_info">
      
 <div class="row">
@@ -24,10 +24,5 @@
 
       <%= f.submit "変更の保存", class: "btn btn-primary" %>
     <% end %>
-
-    <div class="gravatar_edit">
-      <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails">プロフィール画像変更</a>
-    </div>
   </div>
 </div>

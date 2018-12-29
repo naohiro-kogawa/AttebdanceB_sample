@@ -1,0 +1,12 @@
+<table class="table table-bordered">
+  <tr>
+    <td class="col-md-4 col-lg-4">
+      <%= link_to "◀︎",work_url(params: { id: @user.id, first_day: @first_day.prev_month }), style:"color:white", class: 'btn btn-default btn-primary' %>
+        <%= @first_day.strftime("%Y年%m月") %>　勤怠管理表
+          <%= link_to "▶︎",work_url(params: { id: @user.id, first_day: @first_day.next_month }), style:"color:white", class: 'btn btn-default btn-primary' %>
+    </td>
+            <td class="col-lg-2">初日　<%= @first_day.beginning_of_month.strftime("%m月%d日") %></td>
+             <td class="col-lg-2">締め　<%= @last_day.strftime("%m月%d日") %></td>
+              <td class="col-md-1 col-lg-1">コード</td>
+  </tr>
+</table>
