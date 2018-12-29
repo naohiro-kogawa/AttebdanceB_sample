@@ -45,6 +45,7 @@ class UsersController < ApplicationController
     end
   end
   
+  
   def destroy
     User.find(params[:id]).destroy
       flash[:success] = "ユーザー登録を削除しました"
@@ -54,7 +55,7 @@ class UsersController < ApplicationController
 private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation, :affiliation)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :affiliation,:specified_work_time, :basic_work_time)
     end
     
     def correct_user

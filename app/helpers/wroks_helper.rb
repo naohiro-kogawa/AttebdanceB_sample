@@ -17,5 +17,15 @@ module WroksHelper
               end
                       return sprintf("%.2f", total / 60 / 60)
     end
-
+def specified_time(work)
+      if work = User.find(params[:id]).specified_work_time
+        sprintf("%.2f", BigDecimal(((work - work.beginning_of_day)/60/60).to_s).to_f )
+      end
+end
+    
+    def basic_time(work)
+      if work = User.find(params[:id]).basic_work_time
+        sprintf("%.2f", BigDecimal(((work - work.beginning_of_day)/60/60).to_s).to_f )
+      end
+    end
 end
