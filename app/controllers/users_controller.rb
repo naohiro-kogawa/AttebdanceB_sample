@@ -45,6 +45,21 @@ class UsersController < ApplicationController
     end
   end
   
+  def edit_basic_info
+    
+  end
+  
+  def update_basic_info
+   @user = current_user
+    if @user.update_attributes(users_basic_params)
+      flash[:success] = "基本情報を更新しました。"
+      redirect_to user_path(current_user,Date.today)
+    else
+      render 'edit'
+    end
+    
+  end
+  
   
   def destroy
     User.find(params[:id]).destroy
@@ -56,6 +71,10 @@ private
 
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation, :affiliation,:specified_work_time, :basic_work_time)
+    end
+    
+    def users_basic_params
+      params.require(:user).permit(:specified_work_time, :basic_work_time)
     end
     
     def correct_user
