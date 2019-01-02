@@ -1,22 +1,26 @@
 class WorksController < ApplicationController
- 
-   def show
-     @user = User.find(params[:id])
-      if !params[:first_day].nil?
+
+  def show
+    @user = User.find(params[:id])
+     if    current_user.admin? 
+     elsif current_user != User.find(params[:id]) 
+           redirect_to(root_url) 
+           flash[:warning] = "ほかのユーザにはアクセスできません"
+     end
+      if  !params[:first_day].nil?
           @first_day = Date.parse(params[:first_day])
       else
-              @first_day = Date.new(Date.today.year, Date.today.month)
+          @first_day = Date.new(Date.today.year, Date.today.month)
       end
-                @last_day = @first_day.end_of_month
-                  @works = @user.works.where(day: @first_day..@last_day)
-                  
-        unless      @user.works.find_by(day: @first_day)
-                      @first_day.all_month.each do |day|
-                        Work.create!(day: day,user_id: @user.id)
-                      end
+            @last_day = @first_day.end_of_month
+            @works = @user.works.where(day: @first_day..@last_day)
+        unless  @user.works.find_by(day: @first_day)
+                @first_day.all_month.each do |day|
+                Work.create!(day: day,user_id: @user.id)
+                end
         end
-        
-   end
+  end
+  
   
    def create
     #updateの処理をこちらのcreateに移動して、処理をわかりやすくしましょう！そのままコピペでいいと思いますが、ルーティングファイルとビューファイルの名前の修正が必要になると思います。
@@ -37,6 +41,13 @@ class WorksController < ApplicationController
   end
   
   def edit
+    @user = User.find(params[:id])
+    if current_user.admin? 
+     elsif current_user != User.find(params[:id]) 
+
+        redirect_to(root_url) 
+            flash[:warning] = "ほかのユーザにはアクセスできません"
+    end
     # editにはedit(勤怠編集ページ)ページを表示するだけの処理をコーディングしてみてください！showページで勤怠情報は作成されているので、シンプルなコーディングになると思います。ですが、処理内容は後回しにして、適正なアクションに適正な処理がコーディングされていることを優先してみてください。
     # 処理の内容はその後に行いましょう！
     @user = User.find(params[:id])

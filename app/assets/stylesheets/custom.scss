@@ -300,6 +300,11 @@ span.picture {
     margin: 0px;
     text-align: center;
 }
+.table-striped tr{
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+}
 .table-bordered{
   width: 100%;
   margin: 0px;
@@ -307,5 +312,6 @@ span.picture {
 }
 
 td {
+  width: 100%;
   height:40px;
 }
