@@ -1,7 +1,9 @@
-<% provide(:title, "プロフィール編集") %>
-<h1>プロフィール編集ページ</h1>
-<section class="user_info">
-     
+<% provide(:title, "アカウント更新") %>
+
+
+<h1><%= @user.name %>のアカウント情報更新</h1>
+
+
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
@@ -21,13 +23,9 @@
 
       <%= f.label :password_confirmation, "パスワード（確認用）" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
-
+      
       <%= f.submit "変更の保存", class: "btn btn-primary" %>
+      
     <% end %>
-
-    <div class="gravatar_edit">
-      <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails">プロフィール画像変更</a>
-    </div>
   </div>
 </div>

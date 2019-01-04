@@ -2,9 +2,20 @@ class StaticPagesController < ApplicationController
 
   def home
    if logged_in?
-      @micropost  = current_user.microposts.build
-      @feed_items = current_user.feed.paginate(page: params[:page])
-      @likes = Like.where(micropost_id: params[:micropost_id])
+      @user = current_user
+      if !params[:first_day].nil?
+          @first_day = Date.parse(params[:first_day])
+      else
+              @first_day = Date.new(Date.today.year, Date.today.month)
+      end
+                @last_day = @first_day.end_of_month
+                  @works = @user.works.where(day: @first_day..@last_day)
+                  
+        unless      @user.works.find_by(day: @first_day)
+                      @first_day.all_month.each do |day|
+                        Work.create!(day: day,user_id: @user.id)
+                      end
+        end
    end
   end
 

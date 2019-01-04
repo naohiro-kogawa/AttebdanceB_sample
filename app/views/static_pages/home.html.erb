@@ -1,21 +1,12 @@
 <% if logged_in? %>
   <div class="row">
-    <aside class="col-md-4">
-      
-    </aside>
-    <div class="col-md-8">
- 
-    </div>
-    <h1><%= link_to "勤怠入力はこちらから", work_path(current_user,Date.today) %></h1>
+    <h1>今月の勤務状況</h1>
+        <%= render 'shared/work_info'%>
   </div>
 <% else %>
-  <div class="center jumbotron">
-    <h1>勤怠システム</h1>
-
-
-    <%= link_to "ログイン", login_path, class: "btn btn-lg btn-primary" %>
-  <p>アカウント作成は <%= link_to "こちら", signup_path%>から</p> 
-  </div>
-
-
+          <div class="center jumbotron">
+            <h1>勤怠システム</h1>
+              <%= link_to "ログイン", login_path, class: "btn btn-lg btn-primary" %>
+                <p>アカウント作成は <%= link_to "こちら", signup_path%>から</p> 
+          </div>
 <% end %>
