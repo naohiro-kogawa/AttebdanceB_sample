@@ -22,26 +22,26 @@
     </tr>
   </table>
   
-  <%= form_for(@user, url: work_path, method: :patch) do |f| %>
+  <%= form_for(@user, url: edit_works_path, method: :patch) do |f| %>
      
 
   <table class="table-striped table-bordered">
     <% @works.each do |work| %>
       <tr>
-        <td class="col-lg-1"><%= work.day.month %>月<%= work.day.day %>日</td>
-        <td class="col-lg-1"><%= %w(日 月 火 水 木 金 土 日)[work.day.wday] %></td>
-        <td class="col-lg-1">
+        <td class="col-lg-2"><%= work.day.month %>月<%= work.day.day %>日</td>
+        <td class="col-lg-2"><%= %w(日 月 火 水 木 金 土 日)[work.day.wday] %></td>
+        <td class="col-lg-2">
           <%= fields_for "works[]", work do |fi| %>
           <%= fi.time_field :attendance_time, {class: 'form-control'} %>
           <% end %>
         </td>
-        <td class="col-lg-1">
+        <td class="col-lg-2">
           <%= fields_for "works[]", work do |fi| %>
           <%= fi.time_field :leaving_time, {class: 'form-control'}  %>
           <% end %>
         </td>
-        <td class="col-lg-1"><%= day_work_time(work) %></td>
-        <td class="col-lg-1"><%= work.remarks %></td>
+        <td class="col-lg-2"><%= day_work_time(work) %></td>
+        <td class="col-lg-2"><%= work.remarks %></td>
       </tr>
     <%end%>
   </table>
