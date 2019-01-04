@@ -3,18 +3,19 @@ Rails.application.routes.draw do
   root                'static_pages#home'
   get    'help'    => 'static_pages#help'
   get    'about'   => 'static_pages#about'
-  get    'contact' => 'static_pages#contact'
   get    'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-  put    'update'  => 'works#update' 
-  post   '/works/:id/edit' , to: 'works#edit'
+  get    'users/:id'    => 'works#show'
+  get    'users/:id/edit_basic_info',to:'users#edit_basic_info',as:'edit_basic_info'
+  patch  'users/:id/update_basic_info' , to: 'users#update_basic_info',as:'update_basic_info'
+  
   resources :works
   # resources :worksがあるので修正はいらなかったですね。そのままコントローラーのアクションcreateの追加とビューの名前変更で行けると思います！
   resources :users do
-   
   end
+  
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :relationships,       only: [:create, :destroy]

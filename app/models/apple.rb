@@ -1,2 +1,0 @@
-class Apple < ApplicationRecord
-end

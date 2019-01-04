@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181027085238) do
+ActiveRecord::Schema.define(version: 20181229015244) do
 
   create_table "apples", force: :cascade do |t|
     t.string "name"
@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(version: 20181027085238) do
     t.string "reset_digest"
     t.datetime "reset_sent_at"
     t.string "affiliation"
+    t.datetime "specified_work_time"
+    t.datetime "basic_work_time"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
