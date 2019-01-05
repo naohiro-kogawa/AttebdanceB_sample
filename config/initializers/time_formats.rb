@@ -18,4 +18,4 @@ Time::DATE_FORMATS[:hour] = "%H"
 Time::DATE_FORMATS[:minute] = "%M"
 
 # 使わないかもしれない
-Time::DATE_FORMATS[:times] = "%Y年%m月%d日 %H時%M分%S秒"
+Time::DATE_FORMATS[:times] = "%Y年%m月%d日 %H時%M分"

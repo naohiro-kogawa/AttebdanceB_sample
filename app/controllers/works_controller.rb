@@ -50,10 +50,10 @@ class WorksController < ApplicationController
     @user = current_user
     work = Work.find(params[:id])
     if params[:button_type] == "start" && work.attendance_time.nil?
-      work.update(attendance_time: Time.zone.now)
+      work.update(attendance_time: Time.zone.now.to_s(:long))
       flash[:success] = "今日も一日頑張りましょう！"
       elsif params[:button_type] == "end" && work.leaving_time.nil?
-      work.update(leaving_time: Time.zone.now)
+      work.update(leaving_time: Time.zone.now.to_s(:long))
       flash[:success] = "お疲れ様でした！"
     end
     redirect_to work_url(@user)
