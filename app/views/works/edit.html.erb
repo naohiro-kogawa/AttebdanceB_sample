@@ -1,6 +1,7 @@
  <% provide(:title, @user.name) %>
 
 
+
 <h1><%= @user.name %>の勤怠情報の編集</h1>
 
 
@@ -21,7 +22,7 @@
     </tr>
   </table>
   
-  <%= form_for(@user, url: edit_works_path, method: :patch) do |f| %>
+  <%= form_for(@user, url: edit_works_path, method: :post) do |f| %>
      
 
   <table class="table-striped table-bordered">

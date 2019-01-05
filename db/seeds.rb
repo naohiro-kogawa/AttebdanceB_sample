@@ -21,25 +21,7 @@ User.create!(name:  "管理者（菅沼大樹）",
                activated_at: Time.zone.now)
 end
 
-users = User.order(:created_at).take(6)
-50.times do
-  content = Faker::Lorem.sentence(5)
-  users.each { |user| user.microposts.create!(content: content) }
-end
-
-
-
-# リレーションシップ
-users = User.all
-user  = users.first
-following = users[2..50]
-followers = users[3..40]
-following.each { |followed| user.follow(followed) }
-followers.each { |follower| follower.follow(user) }
-
-
-
-
+# 勤怠作成
 days = (Date.new(2018,12).all_month)
 user = User.find(1)
 start_time = Time.new(2018, 5, 30, 9, 00, 00)
