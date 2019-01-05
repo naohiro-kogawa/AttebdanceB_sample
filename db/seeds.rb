@@ -22,13 +22,13 @@ User.create!(name:  "管理者（菅沼大樹）",
 end
 
 # 勤怠作成
-days = (Date.new(2018,12).all_month)
-user = User.find(1)
-start_time = Time.new(2018, 5, 30, 9, 00, 00)
-end_time = Time.new(2018, 5, 30, 17, 15, 00)
-    days.each do |day|
-      Work.create!(day: day,
-             attendance_time: start_time,
-             leaving_time: end_time,
-             user_id: user.id)
-    end
+#days = (Date.new(2018,12).all_month)
+#user = User.find(1)
+#start_time = Time.new(2018, 5, 30, 9, 00, 00)
+#end_time = Time.new(2018, 5, 30, 17, 15, 00)
+#    days.each do |day|
+#      Work.create!(day: day,
+#             attendance_time: start_time,
+#             leaving_time: end_time,
+#             user_id: user.id)
+#    end
